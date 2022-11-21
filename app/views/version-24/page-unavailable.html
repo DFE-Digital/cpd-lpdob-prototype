@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+	Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+	<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-two-thirds">
+
+			<form class="form" action="/version-24/choose-programme" method="post">
+				<div class="govuk-form-group">
+					
+					<h1 class="govuk-label-wrapper">
+						<label class="govuk-label govuk-label--l" for="adjustment-type">
+							Page unavailable on prototype
+						</label>
+					</h1>
+					<p class="govuk-body">
+						The ECF financial statement is currently being redesigned.
+					</p>
+					<p class="govuk-body">
+						Alternatively, the NPQ financial statement is available and can be viewed <a href="/version-24/financial-statement-NPQ-v9" class="govuk-link">here</a>.
+					</p>
+
+				</div>
+
+				<button class="govuk-button" data-module="govuk-button">Back</button>
+
+			</form>
+
+		</div>
+	</div>
+
+{% endblock %}

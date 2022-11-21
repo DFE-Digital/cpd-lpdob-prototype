@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+	Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+	<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-two-thirds">
+
+			<form class="form" action="/version-24/financial-statement-ECF-v3-B2-added-adjustment" method="post">
+				<div class="govuk-form-group">
+					
+					<h1 class="govuk-label-wrapper">
+						<label class="govuk-label govuk-label--l" for="adjustment-type">
+							Page unavailable on prototype
+						</label>
+					</h1>
+					<p class="govuk-body">
+						It is not currently possible to add more than one additional adjustment to the financial statement on this prototype. To see how this functionality works (adding more than one), please refer to the  <a href="https://www.figma.com/file/2uGkLMh4qjHsA214rTM9nl/CPDLP-1659---Financial-statement-(ECF)---View%2C-add%2C-change-or-remove-adjustment?node-id=0%3A1&t=DD31iBE4MBgjwOR7-1" target="_blank" class="govuk-link">Figjam whiteboard (opens in new tab)</a> for more information.
+					</p>
+				</div>
+
+				<button class="govuk-button" data-module="govuk-button">Continue</button>
+
+			</form>
+
+		</div>
+	</div>
+
+{% endblock %}

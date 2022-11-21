@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+	Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-two-thirds">
+			
+			<form class="form" action="/choose-provider-answer-npq" method="post">
+		        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+		        {{ govukRadios({
+		          idPrefix: "choose-provider",
+		          name: "choose-provider",
+		          fieldset: {
+		            legend: {
+		              text: "Choose provider",
+		              isPageHeading: true,
+		              classes: "govuk-fieldset__legend--l"
+		            }
+		          },
+		          items: [
+		            {
+		              value: "ambition institute",
+		              text: "Ambition Institute",
+		              checked: checked("choose-provider", "Ambition Institute")
+		            },
+		            {
+		              value: "best practice network",
+		              text: "Best Practice Network",
+		              checked: checked("choose-provider", "Best Practice Network")
+		            }
+		            ,
+		            {
+		              value: "church of england",
+		              text: "Church of England",
+		              checked: checked("choose-provider", "Church of England")
+		            }
+		            ,
+		            {
+		              value: "education development trust",
+		              text: "Education Development Trust",
+		              checked: checked("choose-provider", "Education Development Trust")
+		            }
+		            ,
+		            {
+		              value: "school-led network",
+		              text: "School-Led Network",
+		              checked: checked("choose-provider", "School-Led Network")
+		            }
+		            ,
+		            {
+		              value: "leadership learning south east",
+		              text: "Leadership Learning South East",
+		              checked: checked("choose-provider", "Leadership Learning South East")
+		            }
+		            ,
+		            {
+		              value: "ucl institute of education",
+		              text: "UCL Institute of Education",
+		              checked: checked("choose-provider", "UCL Institute of Education")
+		            }
+		            ,
+		            {
+		              value: "teacher development trust",
+		              text: "Teacher Development Trust",
+		              checked: checked("choose-provider", "Teacher Development Trust")
+		            }
+		            ,
+		            {
+		              value: "teach first",
+		              text: "Teach First",
+		              checked: checked("choose-provider", "Teach First")
+		            }
+		            ,
+		            {
+		              value: "national institute of teaching",
+		              text: "National Institute of Teaching",
+		              checked: checked("choose-provider", "National Institute of Teaching")
+		            }
+		          ]
+		        }) }}
+
+	        <button class="govuk-button" data-module="govuk-button">
+	          Continue
+	        </button>
+	      </form>
+			
+		</div>
+	</div>
+
+{% endblock %}

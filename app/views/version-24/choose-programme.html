@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+	Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-two-thirds">
+			
+			<form class="form" action="/choose-programme-answer" method="post">
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          idPrefix: "ecf-or-npq",
+          name: "ecf-or-npq",
+          fieldset: {
+            legend: {
+              text: "Choose trainee payments scheme",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "ecf payments",
+              text: "ECF payments",
+              checked: checked("ecf-or-npq", "ECF payments")
+            },
+            {
+              value: "npq payments",
+              text: "NPQ payments",
+              checked: checked("ecf-or-npq", "NPQ payments")
+            }
+          ]
+        }) }}
+
+        <!-- <form method="post" novalidate action=""> -->
+        <!-- <form class="form" action="/index" method="post"> -->
+      
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </form>
+			<!-- <form accept-charset="UTF-8" action="/choose-provider" data-remote="true" method="post">
+				<input autocomplete="off" name="authenticity_token" type="hidden" value="V55+6hZXquYWvl4SCR0M2BnBwSkUENl/MS3la5Kv+PrNilFamF4kyZvX0yJbzbbyx3GkRONh9X/Kt2tGAS8Xeg==">
+				<h1 class="govuk-heading-xl">
+					Choose trainee payments scheme
+				</h1>
+				<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset">
+						<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">I want to review:</legend><input autocomplete="off" id="finance_choose_payment_breakdown_form_programme" name="finance_choose_payment_breakdown_form[programme]" type="hidden" value="">
+						<div class="govuk-radios" data-module="govuk-radios">
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="finance-choose-payment-breakdown-form-programme-ecf-field" name="finance_choose_payment_breakdown_form[programme]" type="radio" value="ecf"><label class="govuk-label govuk-radios__label" for="finance-choose-payment-breakdown-form-programme-ecf-field">ECF payments</label>
+							</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="finance-choose-payment-breakdown-form-programme-npq-field" name="finance_choose_payment_breakdown_form[programme]" type="radio" value="npq"><label class="govuk-label govuk-radios__label" for="finance-choose-payment-breakdown-form-programme-npq-field">NPQ payments</label>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+
+				<button class="govuk-button" data-module="govuk-button" data-prevent-double-click="true" formnovalidate="formnovalidate" type="submit">
+					Continue
+				</button>
+			</form> -->
+
+		</div>
+	</div>
+
+{% endblock %}

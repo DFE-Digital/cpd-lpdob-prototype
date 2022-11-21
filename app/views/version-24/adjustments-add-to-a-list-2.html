@@ -1,0 +1,135 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+	Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+	<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+		<div class="govuk-grid-column-two-thirds-from-desktop">
+
+			<h1 class="govuk-heading-xl">
+			 You have added an adjustment
+			</h1>
+			<div class="govuk-form-group">
+
+				<table class="govuk-table">
+					<thead class="govuk-table__head">
+						<tr class="govuk-table__row">
+							<th scope="col" class="govuk-table__header">Adjustment type </th>
+							<th scope="col" class="govuk-table__header">Payments</th>
+							<th scope="col" class="govuk-table__header"></th>
+						</tr>
+					</thead>
+					<tbody class="govuk-table__body">
+						<tr class="govuk-table__row">
+							<td class="govuk-table__cell">
+								{{ data['adjustment-type-2']}}
+							</td>
+							<td class="govuk-table__cell">
+								£{{ data['how-much-2']}}
+							</td>
+							<td class="govuk-table__cell">
+								<ul class="govuk-summary-list__actions-list">
+									<li class="govuk-summary-list__actions-list-item">
+										<a class="govuk-link" href="/version-24/check-answers-2">
+											<span aria-hidden="true">
+												Change
+											</span>
+											<span class="govuk-visually-hidden">
+												Change Michael Cain
+											</span>
+										</a>
+									</li>
+									<li class="govuk-summary-list__actions-list-item">
+										<a class="govuk-link" href="/version-24/adjustments-remove-2">
+											<span aria-hidden="true">
+												Remove
+											</span>
+											<span class="govuk-visually-hidden">
+												Remove Michael Cain from the list
+											</span>
+										</a>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__cell">
+								{{ data['adjustment-type']}}
+							</td>
+							<td class="govuk-table__cell">
+								£{{ data['how-much']}}
+							</td>
+							<td class="govuk-table__cell">
+								<ul class="govuk-summary-list__actions-list">
+									<li class="govuk-summary-list__actions-list-item">
+										<a class="govuk-link" href="/version-24/check-answers-2">
+											<span aria-hidden="true">
+												Change
+											</span>
+											<span class="govuk-visually-hidden">
+												Change Michael Cain
+											</span>
+										</a>
+									</li>
+									<li class="govuk-summary-list__actions-list-item">
+										<a class="govuk-link" href="/version-24/adjustments-remove-2">
+											<span aria-hidden="true">
+												Remove
+											</span>
+											<span class="govuk-visually-hidden">
+												Remove Michael Cain from the list
+											</span>
+										</a>
+									</li>
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			<form class="form" action="/add-adjustment-answer-2" method="post">
+				{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+				{{ govukRadios({
+					idPrefix: "add-another",
+					name: "add-another",
+					fieldset: {
+						legend: {
+							text: "Do you need to add another adjustment?",
+							isPageHeading: true,
+							classes: "govuk-fieldset__legend--m"
+						}
+					},
+					items: [
+						{
+							value: "yes",
+							text: "Yes",
+							checked: checked("add-another", "yes")
+						},
+						{
+							value: "no",
+							text: "No",
+							checked: checked("add-another", "no")
+						}
+					]
+				}) }}
+
+				<!-- <form method="post" novalidate action=""> -->
+				<!-- <form class="form" action="/index" method="post"> -->
+			
+				<button class="govuk-button" data-module="govuk-button">
+					Continue
+				</button>
+			</form>
+
+		</div>
+	</div>
+{% endblock %}

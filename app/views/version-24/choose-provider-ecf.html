@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+	Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+	<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-two-thirds">
+			
+			<form class="form" action="/choose-provider-answer-ecf" method="post">
+						{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+						{{ govukRadios({
+							idPrefix: "choose-provider",
+							name: "choose-provider",
+							fieldset: {
+								legend: {
+									text: "Choose provider",
+									isPageHeading: true,
+									classes: "govuk-fieldset__legend--l"
+								}
+							},
+							items: [
+								{
+									value: "ambition institute",
+									text: "Ambition Institute",
+									checked: checked("choose-provider", "Ambition Institute")
+								},
+								{
+									value: "best practice network",
+									text: "Best Practice Network",
+									checked: checked("choose-provider", "Best Practice Network")
+								}
+								,
+								{
+									value: "capita",
+									text: "Capita",
+									checked: checked("choose-provider", "Capita")
+								}
+								,
+								{
+									value: "education development trust",
+									text: "Education Development Trust",
+									checked: checked("choose-provider", "Education Development Trust")
+								}
+								,
+								{
+									value: "ucl institute of education",
+									text: "UCL Institute of Education",
+									checked: checked("choose-provider", "UCL Institute of Education")
+								}
+								,
+								{
+									value: "teach first",
+									text: "Teach First",
+									checked: checked("choose-provider", "Teach First")
+								}
+							]
+						}) }}
+
+					<button class="govuk-button" data-module="govuk-button">
+						Continue
+					</button>
+				</form>
+			
+		</div>
+	</div>
+
+{% endblock %}

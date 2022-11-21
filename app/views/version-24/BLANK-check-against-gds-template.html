@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+	Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+	tag: {
+		text: "Prototype"
+	},
+	html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+	}) }}
+	<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-two-thirds">
+
+			<form class="form" action="/add-adjustment-how-much" method="post">
+				<div class="govuk-form-group">
+					<span class="govuk-caption-l">
+						Caption
+					</span>
+					<h1 class="govuk-label-wrapper">
+						<label class="govuk-label govuk-label--l" for="adjustment-type">
+							Title
+						</label>
+					</h1>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar libero magna, at convallis dui pharetra sit amet. Nam consectetur libero quam, a maximus leo vestibulum et. Vestibulum convallis vulputate erat, imperdiet convallis odio consectetur eget.
+					</p>
+				</div>
+
+				<button class="govuk-button" data-module="govuk-button">Continue</button>
+
+			</form>
+
+		</div>
+	</div>
+
+{% endblock %}

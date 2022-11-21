@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">
+        Add adjustment
+      </span>
+      
+      <h1 class="govuk-heading-xl">
+        Are you sure you want to remove the {{ data['adjustment-type-2']}} adjustment?
+      </h1>
+
+      <div class="govuk-button-group">
+        <a href="/version-24/financial-statement-ECF-v3-B2-added-adjustment" class="govuk-button">
+        Continue
+        </a>
+
+        <a class="govuk-link" href="/version-24/adjustments-add-to-a-list-1">Cancel</a>
+      </div>
+      <!-- <form class="form" action="/remove-adjustment-answer-2" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+          {{ govukRadios({
+            idPrefix: "remove-adjustment-2",
+            name: "remove-adjustment-2",
+            fieldset: {
+              legend: {
+                text: "Are you sure you want to remove the [n] adjustment?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+              }
+            },
+            items: [
+                {
+                  value: "yes",
+                  text: "Yes",
+                  checked: checked("add-another", "yes")
+                },
+                {
+                  value: "no",
+                  text: "No",
+                  checked: checked("add-another", "no")
+                }
+              ]
+            }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+      </form> -->
+
+    </div>
+  </div>
+
+{% endblock %}
