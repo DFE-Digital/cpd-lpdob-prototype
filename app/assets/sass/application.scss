@@ -18,6 +18,7 @@ $govuk-assets-path: '/govuk/assets/';
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 
+
 /*  START
 ==============================
 VERSION 24: 
@@ -325,3 +326,114 @@ $tweak13: 558px;
 
 /*  End: media queries 
 ------------------------------ */
+
+/*
+
+@media (min-width: 40.0625em)
+.govuk-summary-list__key {
+    width: 33.3%;
+}
+@media (min-width: 40.0625em)
+.govuk-summary-list__value {
+    width: 33.3%;
+}
+@media (min-width: 40.0625em)
+.govuk-summary-list__actions {
+    width: 33.3%;
+}
+
+.govuk-summary-list__row .govuk-summary-list__key {
+    width: 33.3%;
+}
+*/
+
+$tweak14: 40.625em;
+.govuk-accordion__section-button{
+  @media (min-width: $tweak14) {
+  font-size: 24px;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+}
+
+.js-enabled {
+    .govuk-accordion__section--expanded {
+        .govuk-accordion__section-button {
+            padding-bottom: 0;
+            border-bottom: 0;
+            padding-top:20px
+        }
+    }
+}
+
+.js-enabled .govuk-accordion__section-button {
+    border-top: 3px solid #b1b4b6;
+}
+
+.js-enabled .govuk-accordion {
+    border-bottom: none;
+}
+
+div#accordion-default-content-3 {
+    padding-bottom: 10px;
+}
+
+.govuk-inset-text {
+    padding: 15px 15px 0;
+
+}
+
+/*  Admin finance /
+    participant:
+    align columns fix
+============================== */
+
+/*  Summary list table
+------------------------------ */
+$tweak15: 40.625em;
+.govuk-summary-list__key {
+  @media (min-width: $tweak15) {
+    width: 30%;
+  }
+}
+
+$tweak16: 40.625em;
+.govuk-summary-list__value {
+  @media (min-width: $tweak16) {
+    width: 50%;
+  }
+}
+
+$tweak17: 40.625em;
+.govuk-summary-list__actions {
+  @media (min-width: $tweak17) {
+    width: 20%;
+  }
+}
+
+/*  Standard table (dec history)
+------------------------------ */
+.table-participant {
+    width: 100%;
+}
+.table-participant {
+    th {
+        &:first-child {
+            width: 31%;
+        }
+    }
+}
+.table-participant {
+    th {
+        &:nth-child(2) {
+            width: 49%;
+        }
+    }
+}
+.table-participant {
+    th {
+        &:nth-child(3) {
+            width: 20%;
+        }
+    }
+}
