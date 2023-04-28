@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layouts/main.html" %}
 
 {% block pageTitle %}
 	Question page template – {{ serviceName }} – GOV.UK Prototype Kit
@@ -14,7 +14,7 @@
 	<div class="govuk-grid-row">
 		<div class="govuk-grid-column-two-thirds">
 			
-			<form class="form" action="/choose-programme-answer" method="post">
+			<form class="form" action="choose-programme-answer" method="post">
         {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
         {{ govukRadios({

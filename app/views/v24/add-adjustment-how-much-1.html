@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layouts/main.html" %}
 
 {% block pageTitle %}
   Question page template – {{ serviceName }} – GOV.UK Prototype Kit
@@ -18,7 +18,7 @@
         Add adjustment
       </span>
 
-      <form class="form" action="/version-24/check-answers-1" method="post">
+      <form class="form" action="check-answers-1" method="post">
 
         <div class="govuk-form-group">
           <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="adjustment-type">

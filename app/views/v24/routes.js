@@ -1,8 +1,12 @@
-const express = require('express')
-const router = express.Router()
+const express = require('express');
+const router = express.Router();
 
-// Add your routes here - above the module.exports line
 
-// UPDATE
 
-module.exports = router
+
+
+const v24Routes = require('./routes/v24');
+
+router.use('/', v24Routes);
+
+module.exports = router;

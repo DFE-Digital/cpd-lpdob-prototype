@@ -1,8 +1,9 @@
-const express = require('express');
-const router = express.Router();
+//
+// For guidance on how to create routes see:
+// https://prototype-kit.service.gov.uk/docs/create-routes
+//
 
-const v24Routes = require('./routes/v24');
+const govukPrototypeKit = require('govuk-prototype-kit')
+const router = govukPrototypeKit.requests.setupRouter()
 
-router.use('/', v24Routes);
-
-module.exports = router;
+// Add your routes here
