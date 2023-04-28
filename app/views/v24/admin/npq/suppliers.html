@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">
+        Add adjustment
+      </span>
+
+      <form class="form" action="/version-24/check-answers-1" method="post">
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="adjustment-type">
+              How much is the adjustment?
+            </label>
+          </h1>
+          <p>
+            Enter the amount of money that needs to be paid. For example, £1,200.50
+          </p>
+          <div id="how-much-hint" class="govuk-hint">
+            Enter the amount in pounds and pence
+          </div>
+
+          <div class="govuk-input__wrapper">
+            <div class="govuk-input__prefix" aria-hidden="true">£</div>
+            <input class="govuk-input govuk-input--width-5" id="how-much" name="how-much" type="text" spellcheck="false">
+          </div>
+
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

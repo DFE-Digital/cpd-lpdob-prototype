@@ -8551,6 +8551,30 @@ VERSION 24:
 ==============================
 Darren C - 15/11/22
 ------------------------------ */
+.primary-nav {
+  display: flex;
+  flex-direction: row;
+  height: 2.5rem;
+  font-weight: 700;
+}
+
+.primary-nav-container {
+  background-color: #f3f2f1;
+  border-bottom: 1px #b1b4b6 solid;
+}
+
+.primary-nav-container .primary-nav .nav-item {
+  font-size: 1.1rem;
+}
+
+div {
+  display: block;
+}
+
+.primary-nav-container .primary-nav .nav-item:not(:last-child) {
+  margin-right: 25px;
+}
+
 .govuk-\!-width-full {
   width: 100% !important;
 }
