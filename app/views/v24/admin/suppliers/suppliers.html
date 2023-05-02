@@ -6,7 +6,61 @@
 
 {% block beforeContent %}
 
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+<div class="primary-nav-container">
+  <div class="govuk-width-container">
+    <div class="primary-nav">
+        <div class="nav-item ">
+  <a class="govuk-link govuk-link--no-visited-state" href="/admin/schools">
+    
+      Schools
+ 
+</a></div>
+
+        <div class="nav-item ">
+  <a class="govuk-link govuk-link--no-visited-state" href="/admin/participants">
+    
+      Participants
+ 
+</a></div>
+
+        <div class="nav-item nav-item__selected">
+  <a class="govuk-link govuk-link--no-visited-state" href="/admin/suppliers">
+    
+      Suppliers
+ <span class="govuk-visually-hidden">Current page</span>
+</a></div>
+
+        <div class="nav-item ">
+  <a class="govuk-link govuk-link--no-visited-state" href="/admin/administrators">
+    
+      Admin users
+ 
+</a></div>
+
+        <div class="nav-item ">
+  <a class="govuk-link govuk-link--no-visited-state" href="/admin/npq/applications/edge_cases">
+    
+      NPQ
+ 
+</a></div>
+
+        <div class="nav-item ">
+  <a class="govuk-link govuk-link--no-visited-state" href="/admin/delivery-partners/users">
+    
+      Delivery partners
+ 
+</a></div>
+
+        <div class="nav-item ">
+  <a class="govuk-link govuk-link--no-visited-state" href="/admin/appropriate-bodies/users">
+    
+        Appropriate bodies
+ 
+</a></div>
+
+    </div>
+  </div>
+</div>
 {% endblock %}
 
 {% block content %}
