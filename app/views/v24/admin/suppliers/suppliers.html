@@ -1,7 +1,7 @@
 {% extends "layouts/main-nav.html" %}
 
 {% block pageTitle %}
-  Admin suppliers
+  Admin suppliers – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 
@@ -38,7 +38,7 @@
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-one-half">
               <div class="search-box__input">
-                <div class="govuk-form-group"><label for="query-field" class="govuk-label govuk-label--s">Search suppliers</label><div class="govuk-hint" id="query-hint">Enter the name of the lead provider or delivery partner</div><input id="query-field" class="govuk-input" aria-describedby="query-hint" type="text" name="query"></div>
+                <div class="govuk-form-group"><label for="query-field" class="govuk-label govuk-label--s">Search suppliers</label><div class="govuk-hint" id="query-hint">Enter the name of the lead provider, delivery partner or appropriate body</div><input id="query-field" class="govuk-input" aria-describedby="query-hint" type="text" name="query"></div>
               </div>
             </div>
             <div class="govuk-grid-column-one-half">
@@ -65,7 +65,7 @@
           </thead>
           <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <td class="govuk-table__cell" data-test="supplier-name"><a class="govuk-link" href="/admin/suppliers/delivery-partners/armstrong-Kuhn">Armstrong-Kuhn</a></td>
+                <td class="govuk-table__cell" data-test="supplier-name"><a class="govuk-link" href="delivery-partners/armstrong-Kuhn">Armstrong-Kuhn</a></td>
                 <td class="govuk-table__cell">Delivery partner</td>
               </tr>
               <tr class="govuk-table__row">
