@@ -1,0 +1,53 @@
+{% extends "layouts/main-nav.html" %}
+
+{% block pageTitle %}
+  Admin suppliers
+{% endblock %}
+
+{% block content %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()",
+    classes: "govuk-!-margin-top-1"
+  }) }}
+
+
+  <div class="govuk-grid-row govuk-!-margin-top-3">
+    <div class="govuk-grid-column-two-thirds">
+     
+      
+
+      <form class="form" action="new-user-detail" method="post">
+        {{ govukRadios({
+          idPrefix: "new-user-type",
+          name: "new-user-type",
+          fieldset: {
+            legend: {
+              text: "What type of user do you want to add?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "Appropriate body",
+              text: "Appropriate body"
+            },
+            {
+              value: "Delivery partner",
+              text: "Delivery partner"
+            },
+            {
+              value: "Lead provider",
+              text: "Lead provider"
+            }
+          ]
+        }) }}
+        
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

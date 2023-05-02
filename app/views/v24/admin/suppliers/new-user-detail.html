@@ -1,0 +1,84 @@
+{% extends "layouts/main-nav.html" %}
+
+{% block pageTitle %}
+  Admin suppliers
+{% endblock %}
+
+{% block content %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()",
+    classes: "govuk-!-margin-top-1"
+  }) }}
+
+
+  <div class="govuk-grid-row govuk-!-margin-top-3">
+  <div class="govuk-grid-column-two-thirds">
+            {% if data['new-user-type'] === 'Appropriate body' %}
+            <h1 class="govuk-heading-l">
+              Add a new appropriate body user
+            </h1>
+          {% elseif data['new-user-type'] === 'Delivery partner' %}
+              <h1 class="govuk-heading-l">
+                Add a new delivery partner user
+              </h1>
+            {% elseif data['new-user-type'] === 'Lead provider' %}
+            <h1 class="govuk-heading-l">
+              Add a new lead provider user
+            </h1>
+          {% endif %}
+    
+    <form class="form" action="new-user-check-answer" method="post">
+
+      {% if data['new-user-type'] === 'Appropriate body' %}
+      {{ govukInput({
+        id: "appropriate-body",
+        name: "appropriate-body",
+        label: {
+          text: "Appropriate body"
+        }
+      }) }}
+    {% elseif data['new-user-type'] === 'Delivery partner' %}
+    {{ govukInput({
+      id: "delivery-partner",
+      name: "delivery-partner",
+      label: {
+        text: "Delivery partner"
+      }
+    }) }}
+      {% elseif data['new-user-type'] === 'Lead provider' %}
+      {{ govukInput({
+        id: "lead-provider",
+        name: "lead-provider",
+        label: {
+          text: "Lead provider"
+        }
+      }) }}
+    {% endif %}
+
+
+
+      
+      {{ govukInput({
+        id: "full-name",
+        name: "full-name",
+        label: {
+          text: "Full name"
+        }
+      }) }}
+      {{ govukInput({
+        id: "email",
+        name: "email",
+        label: {
+          text: "Email"
+        }
+      }) }}
+      
+      
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

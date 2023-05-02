@@ -1,103 +1,155 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/main-nav.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Admin suppliers
 {% endblock %}
 
-{% block beforeContent %}
 
-<div class="primary-nav-container">
-  <div class="govuk-width-container">
-    <div class="primary-nav">
-        <div class="nav-item ">
-  <a class="govuk-link govuk-link--no-visited-state" href="/admin/schools">
-    
-      Schools
- 
-</a></div>
-
-        <div class="nav-item ">
-  <a class="govuk-link govuk-link--no-visited-state" href="/admin/participants">
-    
-      Participants
- 
-</a></div>
-
-        <div class="nav-item nav-item__selected">
-  <a class="govuk-link govuk-link--no-visited-state" href="/admin/suppliers">
-    
-      Suppliers
- <span class="govuk-visually-hidden">Current page</span>
-</a></div>
-
-        <div class="nav-item ">
-  <a class="govuk-link govuk-link--no-visited-state" href="/admin/administrators">
-    
-      Admin users
- 
-</a></div>
-
-        <div class="nav-item ">
-  <a class="govuk-link govuk-link--no-visited-state" href="/admin/npq/applications/edge_cases">
-    
-      NPQ
- 
-</a></div>
-
-        <div class="nav-item ">
-  <a class="govuk-link govuk-link--no-visited-state" href="/admin/delivery-partners/users">
-    
-      Delivery partners
- 
-</a></div>
-
-        <div class="nav-item ">
-  <a class="govuk-link govuk-link--no-visited-state" href="/admin/appropriate-bodies/users">
-    
-        Appropriate bodies
- 
-</a></div>
-
-    </div>
-  </div>
-</div>
-{% endblock %}
 
 {% block content %}
-
+<div class="govuk-width-container__wide">
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full">
 
-      <span class="govuk-caption-xl">
-        Add adjustment
-      </span>
+      <h1 class="govuk-heading-l">
+        Suppliers
+      </h1>
 
       <form class="form" action="/version-24/check-answers-1" method="post">
 
-        <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="adjustment-type">
-              How much is the adjustment?
-            </label>
-          </h1>
-          <p>
-            Enter the amount of money that needs to be paid. For example, £1,200.50
-          </p>
-          <div id="how-much-hint" class="govuk-hint">
-            Enter the amount in pounds and pence
+        <ul class="app-subnav__list">
+          <li class="app-subnav__list-item app-subnav__list-item--selected">
+      <a class="govuk-link app-subnav__link govuk-link--no-visited-state app-subnav__list-item app-subnav__list-item--selected" aria-current="page" href="suppliers">
+        
+        All suppliers
+     <span class="govuk-visually-hidden">Current page</span>
+    </a></li>
+    
+          <li class="app-subnav__list-item">
+      <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="all-users">
+        
+        All users
+     
+    </a></li>
+    
+      </ul>
+      <div class="search-box govuk-!-margin-top-6">
+        <form class="search-box__form" action="/admin/suppliers" accept-charset="UTF-8" data-remote="true" method="get">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-half">
+              <div class="search-box__input">
+                <div class="govuk-form-group"><label for="query-field" class="govuk-label govuk-label--s">Search suppliers</label><div class="govuk-hint" id="query-hint">Enter the name of the lead provider or delivery partner</div><input id="query-field" class="govuk-input" aria-describedby="query-hint" type="text" name="query"></div>
+              </div>
+            </div>
+            <div class="govuk-grid-column-one-half">
+              <div class="search-box__input">
+                <label for="type-field" class="govuk-label govuk-!-margin-top-6">Filter by type</label>
+                <div class="govuk-button-group govuk-!-margin-top-2"><select id="type-field" class="govuk-select" name="type"><option value=""></option>
+                  <option value="delivery_partner">Appropriate bodies</option>
+                  <option value="delivery_partner">Delivery partner</option>
+                  <option value="lead_provider">Lead provider</option></select>
+             
+              <button type="submit" formnovalidate="formnovalidate" class="govuk-button search-box__button govuk-!-margin-left-3" data-module="govuk-button" data-prevent-double-click="true" data-test="search-button">Search</button>
+            </div></div> </div>
           </div>
-
-          <div class="govuk-input__wrapper">
-            <div class="govuk-input__prefix" aria-hidden="true">£</div>
-            <input class="govuk-input govuk-input--width-5" id="how-much" name="how-much" type="text" spellcheck="false">
-          </div>
-
-        </div>
-
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
-
       </form>
+    </div>
+        <button class="govuk-button" data-module="govuk-button">Add a new Delivery partner</button>
 
+        <table class="govuk-table">
+          <thead>
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Supplier</th>
+              <th scope="col" class="govuk-table__header">Supplier type</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-test="supplier-name"><a class="govuk-link" href="/admin/suppliers/delivery-partners/armstrong-Kuhn">Armstrong-Kuhn</a></td>
+                <td class="govuk-table__cell">Delivery partner</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-test="supplier-name"><a class="govuk-link" href="#">Balistreri-Tromp</a></td>
+                <td class="govuk-table__cell">Delivery partner</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-test="supplier-name"><a class="govuk-link" href="#">Barton-Kuhic</a></td>
+                <td class="govuk-table__cell">Delivery partner</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-test="supplier-name"><a class="govuk-link" href="#">Bauch-Bogisich</a></td>
+                <td class="govuk-table__cell">Delivery partner</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-test="supplier-name"><a class="govuk-link" href="#">Becker, Thompson and Collier</a></td>
+                <td class="govuk-table__cell">Delivery partner</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-test="supplier-name"><a class="govuk-link" href="#">Blick-Thiel</a></td>
+                <td class="govuk-table__cell">Delivery partner</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-test="supplier-name"><a class="govuk-link" href="#">Block, Borer and Wilkinson</a></td>
+                <td class="govuk-table__cell">Delivery partner</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-test="supplier-name"><a class="govuk-link" href="#">BMH dp</a></td>
+                <td class="govuk-table__cell">Delivery partner</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-test="supplier-name"><a class="govuk-link" href="#">BMH DP</a></td>
+                <td class="govuk-table__cell">Delivery partner</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-test="supplier-name"><a class="govuk-link" href="#">Bosco LLC</a></td>
+                <td class="govuk-table__cell">Delivery partner</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-test="supplier-name"><a class="govuk-link" href="#">Breitenberg Group</a></td>
+                <td class="govuk-table__cell">Delivery partner</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-test="supplier-name"><a class="govuk-link" href="#">Conn-Hegmann</a></td>
+                <td class="govuk-table__cell">Delivery partner</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-test="supplier-name">Cummerata-Emmerich</td>
+                <td class="govuk-table__cell">Appropriate body</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-test="supplier-name">Cummerata Inc</td>
+                <td class="govuk-table__cell">Appropriate body</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-test="supplier-name">Ernser, Hermiston and Mertz</td>
+                <td class="govuk-table__cell">Appropriate body</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-test="supplier-name">Ambition Institute</td>
+                <td class="govuk-table__cell">Lead provider</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-test="supplier-name">Best Practice Network</td>
+                <td class="govuk-table__cell">Lead provider</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-test="supplier-name">Capita</td>
+                <td class="govuk-table__cell">Lead provider</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-test="supplier-name">Education Development Trust</td>
+                <td class="govuk-table__cell">Lead provider</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-test="supplier-name">Gleichner, Connelly and Gusikowski</td>
+                <td class="govuk-table__cell">Lead provider</td>
+              </tr>
+          </tbody>
+        </table>
+        
+      </form>
+      <nav role="navigation" aria-label="results" class="govuk-pagination"><ul class="govuk-pagination__list"><li class="govuk-pagination__item govuk-pagination__item--current" aria-label="Page 1"><a href="#" class="govuk-link govuk-pagination__link">1</a></li><li class="govuk-pagination__item" aria-label="Page 2"><a href="#" class="govuk-link govuk-pagination__link">2</a></li><li class="govuk-pagination__item" aria-label="Page 3"><a href="#" class="govuk-link govuk-pagination__link">3</a></li><li class="govuk-pagination__item" aria-label="Page 4"><a href="#" class="govuk-link govuk-pagination__link">4</a></li></ul><div class="govuk-pagination__next"><a href="#" class="govuk-link govuk-pagination__link" rel="next"><span class="govuk-pagination__link-title govuk-pagination__link-title--decorated">Next<span class="govuk-visually-hidden"> page</span></span><svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" focusable="false" viewBox="0 0 15 13" aria-hidden="true"><path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path></svg></a></div></nav>
     </div>
   </div>
-
+</div>
 {% endblock %}

@@ -1,0 +1,46 @@
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+
+{% block beforeContent %}
+<div class="primary-nav-container">
+    <div class="govuk-width-container">
+      <div class="primary-nav">
+          <div class="nav-item ">
+    <a class="govuk-link govuk-link--no-visited-state" href="/admin/schools">
+        Schools
+  </a></div>
+          <div class="nav-item ">
+    <a class="govuk-link govuk-link--no-visited-state" href="/admin/participants">
+        Participants 
+  </a></div>
+          <div class="nav-item nav-item__selected">
+    <a class="govuk-link govuk-link--no-visited-state" href="/admin/suppliers/suppliers">
+        Suppliers
+   <span class="govuk-visually-hidden">Current page</span>
+  </a></div>
+  
+          <div class="nav-item ">
+    <a class="govuk-link govuk-link--no-visited-state" href="/admin/administrators">
+      
+        Admin users
+   
+  </a></div>
+  
+          <div class="nav-item ">
+    <a class="govuk-link govuk-link--no-visited-state" href="/admin/npq/applications/edge_cases">
+      
+        NPQ
+   
+  </a></div>
+  
+         
+  
+      </div>
+    </div>
+  </div>
+{% endblock %}
