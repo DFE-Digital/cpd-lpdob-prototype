@@ -1,0 +1,53 @@
+{% extends "layouts/main-nav.html" %}
+
+{% block pageTitle %}
+  Example school – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">
+        St Peter's Church of England Voluntary Controlled Primary School, Coggeshall
+      </h1>
+
+      <form class="form" action="/version-24/check-answers-1" method="post">
+       
+       
+        <nav class="app-subnav" aria-label="Sub navigation">
+          <ul class="app-subnav__list">
+              <li class="app-subnav__list-item ">
+                <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="example-school">
+                  Overview
+                
+                </a>
+              </li>
+              <li class="app-subnav__list-item app-subnav__list-item--selected">
+                <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="example-school-participants">
+                  Participants
+                  <span class="govuk-visually-hidden">Current page</span>
+                </a>
+              </li>
+              <li class="app-subnav__list-item">
+                <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="example-school-cohorts">
+                  Cohorts
+                </a>
+              </li>
+          </ul>
+        </nav>
+       
+        <h2 class="govuk-heading-l govuk-!-margin-top-6">
+          Participants
+         </h2>
+       
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

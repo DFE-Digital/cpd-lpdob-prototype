@@ -1,0 +1,58 @@
+{% extends "layouts/main-nav.html" %}
+
+{% block pageTitle %}
+  Example school – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">
+        St Peter's Church of England Voluntary Controlled Primary School, Coggeshall
+      </h1>
+
+      <form class="form" action="/version-24/check-answers-1" method="post">
+       
+       
+        <nav class="app-subnav" aria-label="Sub navigation">
+          <ul class="app-subnav__list">
+              <li class="app-subnav__list-item app-subnav__list-item--selected">
+                <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="example-school">
+                  Overview
+                  <span class="govuk-visually-hidden">Current page</span>
+                </a>
+              </li>
+              <li class="app-subnav__list-item ">
+                <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="example-school-participants">
+                  Participants
+                
+                </a>
+              </li>
+              <li class="app-subnav__list-item">
+                <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="example-school-cohorts">
+                  Cohorts
+                </a>
+              </li>
+          </ul>
+        </nav>
+       <h2 class="govuk-heading-l govuk-!-margin-top-6">
+        Overview
+       </h2>
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">URN</dt><dd class="govuk-summary-list__value">115108</dd><dd class="govuk-summary-list__actions"><a class="govuk-link" rel="noreferrer noopener" target="_blank" href="https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/115108">Open in GIAS</a></dd></div>
+          <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Induction tutor</dt><dd class="govuk-summary-list__value"></dd><dd class="govuk-summary-list__actions"><a class="govuk-link" href="/admin/schools/115108-st-peter-s-church-of-england-volu/induction-coordinators/new">Add <span class="govuk-visually-hidden">induction tutor</span></a></dd></div>
+          <div class="govuk-summary-list__row govuk-summary-list__row--no-actions"><dt class="govuk-summary-list__key">Local authority</dt><dd class="govuk-summary-list__value">Essex</dd></div>
+          <div class="govuk-summary-list__row govuk-summary-list__row--no-actions"><dt class="govuk-summary-list__key">Address</dt><dd class="govuk-summary-list__value">Myneer Park<br>Coggeshall<br>Colchester<br>CO6 1YU</dd></div>
+      </dl>
+       
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
