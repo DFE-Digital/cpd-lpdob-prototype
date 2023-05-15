@@ -71,7 +71,7 @@
     </div>
     {{ govukButton({
       text: "Add a new user",
-      href: "new-user-type"
+      href: "new-user-detail"
     }) }}
     <table class="govuk-table">
       <thead>
@@ -79,7 +79,7 @@
           <th scope="col" class="govuk-table__header">Name</th>
           <th scope="col" class="govuk-table__header">Email address</th>
           <th scope="col" class="govuk-table__header">Supplier</th>
-         
+          <th scope="col" class="govuk-table__header"></th>
       </thead>
       <tbody class="govuk-table__body">
         {% if data['new-user-type'] %}
@@ -88,50 +88,48 @@
             <td class="govuk-table__cell"><a data-test="edit-supplier-user-link" class="govuk-link" href="">{{ data['full-name']}}</a></td>
             <td class="govuk-table__cell">{{ data['email']}}</td>
             <td class="govuk-table__cell">{{ data['new-user-type']}}</td>
-           
+            <td class="govuk-table__cell"><a data-test="edit-supplier-user-link" class="govuk-link" href="">Change</a></td>
           </tr>
 
-          {% endif %}
+        {% endif %}
 
            <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a data-test="edit-supplier-user-link" class="govuk-link" href="/admin/suppliers/lead-providers/users/7b789f23-0da4-4e3b-a258-d9ebb87ecf1b/edit">ambition user</a></td>
-            <td class="govuk-table__cell">ambition@example.com</td>
+            <td class="govuk-table__cell">Bert Hungerford</td>
+            <td class="govuk-table__cell">bert.hungerford@example.com</td>
+            <td class="govuk-table__cell">Armstrong-Kuhn</td>
+            <td class="govuk-table__cell"><a data-test="edit-supplier-user-link" class="govuk-link" href="">Change</a></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Alan Bennett</td>
+            <td class="govuk-table__cell">alan.bennett@email.com</td>
+            <td class="govuk-table__cell">Armstrong-Kuhn</td>
+            <td class="govuk-table__cell"><a data-test="edit-supplier-user-link" class="govuk-link" href="">Change</a></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Luthor Driver</td>
+            <td class="govuk-table__cell">luthor@ambition.com</td>
             <td class="govuk-table__cell">Ambition Institute</td>
-            
+            <td class="govuk-table__cell"><a data-test="edit-supplier-user-link" class="govuk-link" href="">Change</a></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Robin Bab</td>
+            <td class="govuk-table__cell">robin.bab@ambition.com</td>
+            <td class="govuk-table__cell">Ambition Institute</td>
+            <td class="govuk-table__cell"><a data-test="edit-supplier-user-link" class="govuk-link" href="">Change</a></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Arthur Price</td>
+            <td class="govuk-table__cell">a.price@Cummerata-Emmerich.com</td>
+            <td class="govuk-table__cell">Cummerata-Emmerich</td>
+            <td class="govuk-table__cell"><a data-test="edit-supplier-user-link" class="govuk-link" href="">Change</a></td>
           </tr>
 
          
 
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a data-test="edit-supplier-user-link" class="govuk-link" href="#">Brian Milman</a></td>
-            <td class="govuk-table__cell">test@testbmuser.com</td>
-            <td class="govuk-table__cell">Ambition Institute</td>
-           
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a data-test="edit-supplier-user-link" class="govuk-link" href="#">edt</a></td>
-            <td class="govuk-table__cell">edt@example.com</td>
-            <td class="govuk-table__cell">Education Development Trust</td>
-           
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a data-test="edit-supplier-user-link" class="govuk-link" href="#">Lead provider user</a></td>
-            <td class="govuk-table__cell">lead-provider@example.com</td>
-            <td class="govuk-table__cell">Capita</td>
-            
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a data-test="edit-supplier-user-link" class="govuk-link" href="#">niot</a></td>
-            <td class="govuk-table__cell">niot@example.com</td>
-            <td class="govuk-table__cell">National Institute of Teaching</td>
-           
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a data-test="edit-supplier-user-link" class="govuk-link" href="#ß">Test user</a></td>
-            <td class="govuk-table__cell">test@test.ux</td>
-            <td class="govuk-table__cell">Capita</td>
-          
-          </tr>
       </tbody>
     </table>
 

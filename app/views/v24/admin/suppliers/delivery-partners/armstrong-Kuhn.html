@@ -1,15 +1,35 @@
 {% extends "layouts/main-nav.html" %}
 
 {% block pageTitle %}
-  Admin suppliers
+PROTOTYPE - Admin suppliers
 {% endblock %}
 
 
 
 {% block content %}
-
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()",
+  classes: "govuk-!-margin-top-1"
+}) }}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+
+      {% if data['email-dp'] %}
+      {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+      {% set html %}
+        <h3 class="govuk-notification-banner__heading">
+          New user added successfully
+        </h3>
+       
+      {% endset %}
+      
+      {{ govukNotificationBanner({
+        html: html,
+        type: 'success'
+      }) }}
+{% endif %}
       <span class="govuk-caption-l">Delivery partner details</span>
       <h1 class="govuk-heading-l">
         Armstrong-Kuhn
@@ -18,100 +38,210 @@
       <form class="form" action="/version-24/check-answers-1" method="post">
 
        
-        <h2 class="govuk-heading-m">
-          Lead provider and cohort information
-        </h2>
-        {{ govukButton({
-          text: "Add a new lead provider",
-          classes: "govuk-button--secondary"
-        }) }}
-        <table class="govuk-table">
-          <thead>
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header govuk-!-width-one-half">Lead provider</th>
-              <th scope="col" class="govuk-table__header govuk-!-width-one-third">Selected cohorts</th>
-              <th scope="col" class="govuk-table__header "></th>
-          </thead>
-          <tbody class="govuk-table__body">
-               <tr class="govuk-table__row">
-                <td class="govuk-table__cell">Ambition Institute</td>
-                <td class="govuk-table__cell">
-                  <ul class="govuk-list ">
-                    <li>
-                      2023
+      
+
+        {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+              {{ govukSummaryList({
+                card: {
+                  title: {
+                    text: "Lead providers and cohorts"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "Change cohorts",
+                        visuallyHiddenText: "for Armstrong-Kuhn"
+                      }
+                    ]
+                  }
+                },
+                rows: [
+                  {
+                    key: {
+                      text: "2023"
+                    },
+                    value: {
+                      html: "<ul class='govuk-list govuk-list--bullet'>
+                        <li>
+                          <a href='../lead-provider/ambition-institute' class='govuk-link'>    Ambition Institute</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'>   Best Practice Network</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'>  Capita</a>
+                        </li>
+                      </ul>"
+                    }
+                  }
+                ]
+              }) }}
+
+
+              {% set previousyearsHtml %}
+              {{ govukSummaryList({
+                card: {
+                  title: {
+                    text: "Previous year's cohorts"
+                  },
+                  actions: {
+                    items: [
+                      {
+                       
+                      }
+                    ]
+                  }
+                },
+                rows: [
+                  {
+                    key: {
+                      text: "2022"
+                    },
+                    value: {
+                      html: "<ul class='govuk-list govuk-list--bullet'>
+                        <li>
+                          <a href='../lead-provider/ambition-institute' class='govuk-link'>    Ambition Institute</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'>  Best Practice Network</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'>  Capita</a>
+                        </li>
+                      </ul>"
+                    }
+                  },
+                  {
+                    key: {
+                      text: "2021"
+                    },
+                    value: {
+                      html: "<ul class='govuk-list govuk-list--bullet'>
+                        <li>
+                          <a href='../lead-provider/ambition-institute' class='govuk-link'>    Ambition Institute</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'>    Best Practice Network</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'>  Capita</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'>  National Institute of Teaching</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'>  Teach First</a>
+                        </li>
+                      </ul>"
+                    }
+                  },
+                  {
+                    key: {
+                      text: "2020"
+                    },
+                    value: {
+                      html: "<ul class='govuk-list govuk-list--bullet'>
+                        <li>
+                          <a href='../lead-provider/ambition-institute' class='govuk-link'>    Ambition Institute</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'>   Best Practice Network</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'>   Capita</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'>  National Institute of Teaching</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'> Teach First</a>
+                        </li>
+                      </ul>"
+                    }
+                  }
+                ]
+              }) }}
+                
+              {% endset -%}
+
+              {{ govukDetails({
+                summaryText: "Previous cohorts",
+                html: previousyearsHtml
+              }) }}
+
+
+
+
+              <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                  <h2 class="govuk-summary-card__title">Users</h2>
+                  <ul class="govuk-summary-card__actions">
+                    <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+                        Add new user<span class="govuk-visually-hidden"> to Armstrong-Kuhn</span>
+                      </a>
                     </li>
-                    <li>
-                      2021
-                    </li>
+                  
                   </ul>
-                </td>
-                <td class="govuk-table__cell"><a href="#" class="govuk-link">Change</a></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">Best Practice Network</td>
-                <td class="govuk-table__cell"> <ul class="govuk-list">
-                  <li>
-                    2023
-                  </li>
-                  <li>
-                    2022
-                  </li>
-                <li>
-                  2021
-                </li>
-                </ul>
-              </td>
-              <td class="govuk-table__cell"><a href="#" class="govuk-link">Change</a></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">National Institute of Teaching</td>
-                <td class="govuk-table__cell">
-                  <ul class="govuk-list ">
-                    <li>
-                      2023
-                    </li>
-                 
-                  </ul>
-                </td>
-                <td class="govuk-table__cell"><a href="#" class="govuk-link">Change</a></td>
-              </tr>
-             
-              
-          </tbody>
-        </table>
-        <br><br>
-        <h2 class="govuk-heading-m">
-          Armstrong-Kuhn user details
-        </h2>
-        {{ govukButton({
-          text: "Add a new user",
-          classes: "govuk-button--secondary"
-        }) }}
-        <table class="govuk-table">
-          <thead>
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header govuk-!-width-one-half">Name</th>
-              <th scope="col" class="govuk-table__header govuk-!-width-one-third">Email address</th>
-              <th scope="col" class="govuk-table__header "></th>
-          </thead>
-          <tbody class="govuk-table__body">
-               <tr class="govuk-table__row">
-                <td class="govuk-table__cell"><a data-test="edit-supplier-user-link" class="govuk-link" href="/admin/suppliers/lead-providers/users/7b789f23-0da4-4e3b-a258-d9ebb87ecf1b/edit">ambition user</a></td>
-                <td class="govuk-table__cell">ambition@example.com</td>
-                <td class="govuk-table__cell"><a href="#" class="govuk-link">Change</a></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell"><a data-test="edit-supplier-user-link" class="govuk-link" href="#">Brian Milman</a></td>
-                <td class="govuk-table__cell">test@testbmuser.com</td>
-                <td class="govuk-table__cell"><a href="#" class="govuk-link">Change</a></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell"><a data-test="edit-supplier-user-link" class="govuk-link" href="#">edt</a></td>
-                <td class="govuk-table__cell">edt@example.com</td>
-                <td class="govuk-table__cell"><a href="#" class="govuk-link">Change</a></td>
-              </tr>              
-          </tbody>
-        </table>
+                </div>
+                <div class="govuk-summary-card__content">
+                  <dl class="govuk-summary-list">
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        {{ data['full-name-dp']}}
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        {{ data['email-dp']}}
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">
+                          Change<span class="govuk-visually-hidden"> age</span>
+                        </a>
+                      </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Alan Bennett
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        alan.bennett@email.com
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">
+                          Change<span class="govuk-visually-hidden"> Alan Bennett</span>
+                        </a>
+                      </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Bert Hungerford
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        bert.hungerford@email.com
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">
+                          Change<span class="govuk-visually-hidden"> Bert Hungerford</span>
+                        </a>
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+
+            
+
+        
+       
 
       </form>
 

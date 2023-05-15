@@ -1,7 +1,7 @@
 {% extends "layouts/main-nav.html" %}
 
 {% block pageTitle %}
-  Admin suppliers – {{ serviceName }} – GOV.UK Prototype Kit
+  PROTOTYPE - Admin suppliers – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 
@@ -60,95 +60,32 @@
           <thead>
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header">Supplier</th>
-              <th scope="col" class="govuk-table__header">Supplier type</th>
+              <th scope="col" class="govuk-table__header">Type</th>
+              <th scope="col" class="govuk-table__header"></th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <td class="govuk-table__cell" data-test="supplier-name"><a class="govuk-link" href="delivery-partners/armstrong-Kuhn">Armstrong-Kuhn</a></td>
+                <td class="govuk-table__cell" data-test="supplier-name">Armstrong-Kuhn</td>
                 <td class="govuk-table__cell">Delivery partner</td>
+                <td class="govuk-table__cell"><a class="govuk-link" href="delivery-partners/armstrong-Kuhn">Change</a></td>
               </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell" data-test="supplier-name"><a class="govuk-link" href="#">Balistreri-Tromp</a></td>
-                <td class="govuk-table__cell">Delivery partner</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell" data-test="supplier-name"><a class="govuk-link" href="#">Barton-Kuhic</a></td>
-                <td class="govuk-table__cell">Delivery partner</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell" data-test="supplier-name"><a class="govuk-link" href="#">Bauch-Bogisich</a></td>
-                <td class="govuk-table__cell">Delivery partner</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell" data-test="supplier-name"><a class="govuk-link" href="#">Becker, Thompson and Collier</a></td>
-                <td class="govuk-table__cell">Delivery partner</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell" data-test="supplier-name"><a class="govuk-link" href="#">Blick-Thiel</a></td>
-                <td class="govuk-table__cell">Delivery partner</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell" data-test="supplier-name"><a class="govuk-link" href="#">Block, Borer and Wilkinson</a></td>
-                <td class="govuk-table__cell">Delivery partner</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell" data-test="supplier-name"><a class="govuk-link" href="#">BMH dp</a></td>
-                <td class="govuk-table__cell">Delivery partner</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell" data-test="supplier-name"><a class="govuk-link" href="#">BMH DP</a></td>
-                <td class="govuk-table__cell">Delivery partner</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell" data-test="supplier-name"><a class="govuk-link" href="#">Bosco LLC</a></td>
-                <td class="govuk-table__cell">Delivery partner</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell" data-test="supplier-name"><a class="govuk-link" href="#">Breitenberg Group</a></td>
-                <td class="govuk-table__cell">Delivery partner</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell" data-test="supplier-name"><a class="govuk-link" href="#">Conn-Hegmann</a></td>
-                <td class="govuk-table__cell">Delivery partner</td>
-              </tr>
+             
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell" data-test="supplier-name">Cummerata-Emmerich</td>
                 <td class="govuk-table__cell">Appropriate body</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell" data-test="supplier-name">Cummerata Inc</td>
-                <td class="govuk-table__cell">Appropriate body</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell" data-test="supplier-name">Ernser, Hermiston and Mertz</td>
-                <td class="govuk-table__cell">Appropriate body</td>
+                <td class="govuk-table__cell"><a class="govuk-link" href="appropriate-body/cummerata-emmerich">Change</a></td>
               </tr>
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell" data-test="supplier-name">Ambition Institute</td>
                 <td class="govuk-table__cell">Lead provider</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell" data-test="supplier-name">Best Practice Network</td>
-                <td class="govuk-table__cell">Lead provider</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell" data-test="supplier-name">Capita</td>
-                <td class="govuk-table__cell">Lead provider</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell" data-test="supplier-name">Education Development Trust</td>
-                <td class="govuk-table__cell">Lead provider</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell" data-test="supplier-name">Gleichner, Connelly and Gusikowski</td>
-                <td class="govuk-table__cell">Lead provider</td>
+                <td class="govuk-table__cell"><a class="govuk-link" href="lead-provider/ambition-institute">Change</a></td>
               </tr>
           </tbody>
         </table>
         
       </form>
-      <nav role="navigation" aria-label="results" class="govuk-pagination"><ul class="govuk-pagination__list"><li class="govuk-pagination__item govuk-pagination__item--current" aria-label="Page 1"><a href="#" class="govuk-link govuk-pagination__link">1</a></li><li class="govuk-pagination__item" aria-label="Page 2"><a href="#" class="govuk-link govuk-pagination__link">2</a></li><li class="govuk-pagination__item" aria-label="Page 3"><a href="#" class="govuk-link govuk-pagination__link">3</a></li><li class="govuk-pagination__item" aria-label="Page 4"><a href="#" class="govuk-link govuk-pagination__link">4</a></li></ul><div class="govuk-pagination__next"><a href="#" class="govuk-link govuk-pagination__link" rel="next"><span class="govuk-pagination__link-title govuk-pagination__link-title--decorated">Next<span class="govuk-visually-hidden"> page</span></span><svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" focusable="false" viewBox="0 0 15 13" aria-hidden="true"><path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path></svg></a></div></nav>
+      <!--<nav role="navigation" aria-label="results" class="govuk-pagination"><ul class="govuk-pagination__list"><li class="govuk-pagination__item govuk-pagination__item--current" aria-label="Page 1"><a href="#" class="govuk-link govuk-pagination__link">1</a></li><li class="govuk-pagination__item" aria-label="Page 2"><a href="#" class="govuk-link govuk-pagination__link">2</a></li><li class="govuk-pagination__item" aria-label="Page 3"><a href="#" class="govuk-link govuk-pagination__link">3</a></li><li class="govuk-pagination__item" aria-label="Page 4"><a href="#" class="govuk-link govuk-pagination__link">4</a></li></ul><div class="govuk-pagination__next"><a href="#" class="govuk-link govuk-pagination__link" rel="next"><span class="govuk-pagination__link-title govuk-pagination__link-title--decorated">Next<span class="govuk-visually-hidden"> page</span></span><svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" focusable="false" viewBox="0 0 15 13" aria-hidden="true"><path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path></svg></a></div></nav>-->
     </div>
   </div>
 </div>

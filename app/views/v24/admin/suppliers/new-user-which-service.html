@@ -1,7 +1,7 @@
 {% extends "layouts/main-nav.html" %}
 
 {% block pageTitle %}
-New user – {{ serviceName }} – GOV.UK Prototype Kit
+  New user – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
@@ -17,26 +17,33 @@ New user – {{ serviceName }} – GOV.UK Prototype Kit
           
             <h1 class="govuk-heading-l">
               <span class="govuk-caption-l">Add a new user</span>
-              What is their name and email?
+              Which service do they need access to?
             </h1>
          
     
-            <form class="form" action="new-user-which-supplier" method="post">
+    <form class="form" action="new-user-check-answer" method="post">
 
-      {{ govukInput({
-        id: "full-name",
-        name: "full-name",
-        label: {
-          text: "Full name"
-        }
+
+
+      {{ govukCheckboxes({
+        idPrefix: "which-service",
+        name: "which-service",
+        items: [
+        {
+          value: "Appropriate body ",
+          text: "Appropriate body "
+        },
+          {
+            value: "Lead Providers ",
+            text: "Lead Providers "
+          },
+          {
+            value: "Delivery partner ",
+            text: "Delivery partner "
+          }
+        ]
       }) }}
-      {{ govukInput({
-        id: "email",
-        name: "email",
-        label: {
-          text: "Email"
-        }
-      }) }}
+      
       
       
       <button class="govuk-button" data-module="govuk-button">Continue</button>
