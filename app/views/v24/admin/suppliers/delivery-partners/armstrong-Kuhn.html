@@ -19,9 +19,12 @@ PROTOTYPE - Admin suppliers
       {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
       {% set html %}
-        <h3 class="govuk-notification-banner__heading">
-          New user added successfully
-        </h3>
+      <h3 class="govuk-notification-banner__heading">
+        New user added
+      </h3>
+     <p class='govuk-body'>
+      <a href='#' class="govuk-link">{{ data['full-name-dp']}}</a> has been added as a user for Armstrong-Kuhn
+     </p>
        
       {% endset %}
       
@@ -30,7 +33,7 @@ PROTOTYPE - Admin suppliers
         type: 'success'
       }) }}
 {% endif %}
-      <span class="govuk-caption-l">Delivery partner details</span>
+      <span class="govuk-caption-l">Delivery partner </span>
       <h1 class="govuk-heading-l">
         Armstrong-Kuhn
       </h1>
@@ -40,7 +43,7 @@ PROTOTYPE - Admin suppliers
        
       
 <h2 class="govuk-heading-m">
-  Lead providers and cohorts
+  Working with
 </h2>
         {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
@@ -205,7 +208,7 @@ PROTOTYPE - Admin suppliers
                   <h2 class="govuk-summary-card__title">Users</h2>
                   <ul class="govuk-summary-card__actions">
                     <li class="govuk-summary-card__action"> <a class="govuk-link" href="new-user-detail">
-                        Add new user<span class="govuk-visually-hidden"> to Armstrong-Kuhn</span>
+                        Add a new user<span class="govuk-visually-hidden"> to Armstrong-Kuhn</span>
                       </a>
                     </li>
                   
