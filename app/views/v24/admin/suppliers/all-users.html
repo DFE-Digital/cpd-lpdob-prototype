@@ -11,7 +11,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       
-      {% if data['new-user-type'] %}
+      {% if data['full-name'] %}
             {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
             {% set html %}
@@ -82,12 +82,12 @@
           <th scope="col" class="govuk-table__header"></th>
       </thead>
       <tbody class="govuk-table__body">
-        {% if data['new-user-type'] %}
+        {% if data['full-name'] %}
         
         <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a data-test="edit-supplier-user-link" class="govuk-link" href="">{{ data['full-name']}}</a></td>
+            <td class="govuk-table__cell">{{ data['full-name']}}</td>
             <td class="govuk-table__cell">{{ data['email']}}</td>
-            <td class="govuk-table__cell">{{ data['new-user-type']}}</td>
+            <td class="govuk-table__cell">{{ data['supplier']}}</td>
             <td class="govuk-table__cell"><a data-test="edit-supplier-user-link" class="govuk-link" href="">Change</a></td>
           </tr>
 
