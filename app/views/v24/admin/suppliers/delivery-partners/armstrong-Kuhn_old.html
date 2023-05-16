@@ -39,15 +39,13 @@ PROTOTYPE - Admin suppliers
 
        
       
-<h2 class="govuk-heading-m">
-  Lead providers and cohorts
-</h2>
+
         {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
               {{ govukSummaryList({
                 card: {
                   title: {
-                    text: "2023"
+                    text: "Lead providers and cohorts"
                   },
                   actions: {
                     items: [
@@ -62,7 +60,7 @@ PROTOTYPE - Admin suppliers
                 rows: [
                   {
                     key: {
-                      text: "Lead providers"
+                      text: "2023"
                     },
                     value: {
                       html: "<ul class='govuk-list govuk-list--bullet'>
@@ -74,30 +72,6 @@ PROTOTYPE - Admin suppliers
                         </li>
                         <li>
                           <a href='#' class='govuk-link'>  Capita</a>
-                        </li>
-                      </ul>"
-                    }
-                  },
-                  {
-                    key: {
-                      text: "Schools"
-                    },
-                    value: {
-                      html: "<ul class='govuk-list govuk-list--bullet'>
-                        <li>
-                          <a href='#' class='govuk-link'>    Abbey College Manchester</a>
-                        </li>
-                        <li>
-                          <a href='#' class='govuk-link'>   Abbeyfield School</a>
-                        </li>
-                        <li>
-                          <a href='#' class='govuk-link'>  Abbey Green Nursery School & Children's Centre</a>
-                        </li>
-                        <li>
-                          <a href='#' class='govuk-link'>  Abbey Hill Academy</a>
-                        </li>
-                        <li>
-                          <a href='#' class='govuk-link'>  Abbey Lane Primary School</a>
                         </li>
                       </ul>"
                     }

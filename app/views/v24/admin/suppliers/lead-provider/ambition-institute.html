@@ -22,14 +22,16 @@ PROTOTYPE - Admin suppliers
       <form class="form" action="/version-24/check-answers-1" method="post">
 
        
-      
+      <h2 class="govuk-heading-m">
+        Delivery partners and cohorts
+      </h2>
 
         {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
         {{ govukSummaryList({
           card: {
             title: {
-              text: "Delivery partners and cohorts"
+              text: "2023"
             },
             actions: {
               items: [
@@ -42,7 +44,7 @@ PROTOTYPE - Admin suppliers
           rows: [
             {
               key: {
-                text: "2023"
+                text: "Lead providers"
               },
               value: {
                 html: "<ul class='govuk-list govuk-list--bullet'>
@@ -55,20 +57,30 @@ PROTOTYPE - Admin suppliers
                   <li>
                     <a href='../delivery-partners/armstrong-Kuhn' class='govuk-link'>Armstrong-Kuhn</a>
                   </li>
+                
+                </ul>"
+              }
+            },
+            {
+              key: {
+                text: "Schools"
+              },
+              value: {
+                html: "<ul class='govuk-list govuk-list--bullet'>
                   <li>
-                    <a href='#' class='govuk-link'>Aspire Academy Trust</a>
+                    <a href='#' class='govuk-link'>    Abbey College Manchester</a>
                   </li>
                   <li>
-                    <a href='#' class='govuk-link'>Bishop Challoner Training School Alliance</a>
+                    <a href='#' class='govuk-link'>   Abbeyfield School</a>
                   </li>
                   <li>
-                    <a href='#' class='govuk-link'> Camden Learning</a>
+                    <a href='#' class='govuk-link'>  Abbey Green Nursery School & Children's Centre</a>
                   </li>
                   <li>
-                    <a href='#' class='govuk-link'>  Chafford Hundred</a>
+                    <a href='#' class='govuk-link'>  Abbey Hill Academy</a>
                   </li>
                   <li>
-                    <a href='#' class='govuk-link'>  Collaboration of Glossop Schools</a>
+                    <a href='#' class='govuk-link'>  Abbey Lane Primary School</a>
                   </li>
                 </ul>"
               }
