@@ -1,0 +1,131 @@
+{% extends "layouts/main-nav.html" %}
+
+{% block pageTitle %}
+PROTOTYPE - Admin suppliers
+{% endblock %}
+
+
+
+{% block content %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()",
+  classes: "govuk-!-margin-top-1"
+}) }}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {% if data['email-dp'] %}
+      {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+      {% set html %}
+      <h3 class="govuk-notification-banner__heading">
+        New user added
+      </h3>
+     <p class='govuk-body'>
+      <a href='#' class="govuk-link">{{ data['full-name-dp']}}</a> has been added as a user for Armstrong-Kuhn
+     </p>
+       
+      {% endset %}
+      
+      {{ govukNotificationBanner({
+        html: html,
+        type: 'success'
+      }) }}
+{% endif %}
+      <span class="govuk-caption-l">Delivery partner </span>
+      <h1 class="govuk-heading-l">
+        Armstrong-Kuhn
+      </h1>
+
+      <form class="form" action="/version-24/check-answers-1" method="post">
+
+        <ul class="app-subnav__list govuk-!-margin-bottom-9">
+          <li class="app-subnav__list-item ">
+      <a class="govuk-link app-subnav__link govuk-link--no-visited-state " aria-current="page" href="armstrong-Kuhn">
+        
+       Overview
+   
+    </a></li>
+    
+          <li class="app-subnav__list-item app-subnav__list-item--selected">
+      <a class="govuk-link app-subnav__link govuk-link--no-visited-state app-subnav__list-item app-subnav__list-item--selected" href="armstrong-Kuhn-users">
+        
+        All users
+        <span class="govuk-visually-hidden">Current page</span>
+    </a></li>
+    
+      </ul>
+        {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+              <div class="govuk-summary-card">
+                <div class="govuk-summary-card__title-wrapper">
+                  <h2 class="govuk-summary-card__title">Users</h2>
+                  <ul class="govuk-summary-card__actions">
+                    <li class="govuk-summary-card__action"> <a class="govuk-link" href="new-user-detail">
+                        Add a new user<span class="govuk-visually-hidden"> to Armstrong-Kuhn</span>
+                      </a>
+                    </li>
+                  
+                  </ul>
+                </div>
+                 
+                <div class="govuk-summary-card__content"> 
+                  <dl class="govuk-summary-list">
+                    {% if data['full-name-dp'] %}
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        {{ data['full-name-dp']}}
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        {{ data['email-dp']}}
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="new-user-created">
+                          Change<span class="govuk-visually-hidden"> age</span>
+                        </a>
+                      </dd>
+                    </div>
+                    {% endif %}
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Alan Bennett
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        alan.bennett@email.com
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="user/user-detail">
+                          Change<span class="govuk-visually-hidden"> Alan Bennett</span>
+                        </a>
+                      </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Bert Hungerford
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        bert.hungerford@email.com
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">
+                          Change<span class="govuk-visually-hidden"> Bert Hungerford</span>
+                        </a>
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+
+              {{ govukButton({
+                text: "Delete",
+                classes: "govuk-button--warning"
+              }) }}
+  
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

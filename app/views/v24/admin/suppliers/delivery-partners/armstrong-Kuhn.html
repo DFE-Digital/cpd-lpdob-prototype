@@ -40,13 +40,31 @@ PROTOTYPE - Admin suppliers
 
       <form class="form" action="/version-24/check-answers-1" method="post">
 
+        <ul class="app-subnav__list govuk-!-margin-bottom-9">
+          <li class="app-subnav__list-item app-subnav__list-item--selected">
+      <a class="govuk-link app-subnav__link govuk-link--no-visited-state app-subnav__list-item app-subnav__list-item--selected" aria-current="page" href="suppliers">
+        
+       Overview
+     <span class="govuk-visually-hidden">Current page</span>
+    </a></li>
+    
+          <li class="app-subnav__list-item">
+      <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="armstrong-Kuhn-users">
+        
+        All users
+     
+    </a></li>
+    
+      </ul>
        
       
-<h2 class="govuk-heading-m">
-  Working with
-</h2>
+
         {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
+              
+
+
+              {% set 2023Html %}
               {{ govukSummaryList({
                 card: {
                   title: {
@@ -56,7 +74,7 @@ PROTOTYPE - Admin suppliers
                     items: [
                       {
                         href: "#",
-                        text: "Change cohorts",
+                        text: "Change providers and cohorts",
                         visuallyHiddenText: "for Armstrong-Kuhn"
                       }
                     ]
@@ -73,7 +91,7 @@ PROTOTYPE - Admin suppliers
                           <a href='../lead-provider/ambition-institute' class='govuk-link'>    Ambition Institute</a>
                         </li>
                         <li>
-                          <a href='#' class='govuk-link'>   Best Practice Network</a>
+                          <a href='#' class='govuk-link'>    Best Practice Network</a>
                         </li>
                         <li>
                           <a href='#' class='govuk-link'>  Capita</a>
@@ -94,31 +112,29 @@ PROTOTYPE - Admin suppliers
                           <a href='#' class='govuk-link'>   Abbeyfield School</a>
                         </li>
                         <li>
-                          <a href='#' class='govuk-link'>  Abbey Green Nursery School & Children's Centre</a>
+                          <a href='#' class='govuk-link'>   Abbey Green Nursery School & Children's Centre</a>
                         </li>
-                        <li>
-                          <a href='#' class='govuk-link'>  Abbey Hill Academy</a>
-                        </li>
-                        <li>
-                          <a href='#' class='govuk-link'>  Abbey Lane Primary School</a>
-                        </li>
+                       
                       </ul>"
                     }
                   }
                 ]
               }) }}
+                
+              {% endset -%}
 
-
-              {% set previousyearsHtml %}
+              {% set 2022Html %}
               {{ govukSummaryList({
                 card: {
                   title: {
-                    text: "Previous year's cohorts"
+                    text: "2022"
                   },
                   actions: {
                     items: [
                       {
-                       
+                        href: "#",
+                        text: "Change providers and cohorts",
+                        visuallyHiddenText: "for Armstrong-Kuhn"
                       }
                     ]
                   }
@@ -126,25 +142,7 @@ PROTOTYPE - Admin suppliers
                 rows: [
                   {
                     key: {
-                      text: "2022"
-                    },
-                    value: {
-                      html: "<ul class='govuk-list govuk-list--bullet'>
-                        <li>
-                          <a href='../lead-provider/ambition-institute' class='govuk-link'>    Ambition Institute</a>
-                        </li>
-                        <li>
-                          <a href='#' class='govuk-link'>  Best Practice Network</a>
-                        </li>
-                        <li>
-                          <a href='#' class='govuk-link'>  Capita</a>
-                        </li>
-                      </ul>"
-                    }
-                  },
-                  {
-                    key: {
-                      text: "2021"
+                      text: "Lead providers"
                     },
                     value: {
                       html: "<ul class='govuk-list govuk-list--bullet'>
@@ -168,24 +166,24 @@ PROTOTYPE - Admin suppliers
                   },
                   {
                     key: {
-                      text: "2020"
+                      text: "Schools"
                     },
                     value: {
                       html: "<ul class='govuk-list govuk-list--bullet'>
                         <li>
-                          <a href='../lead-provider/ambition-institute' class='govuk-link'>    Ambition Institute</a>
+                          <a href='#' class='govuk-link'>    Abbey College Manchester</a>
                         </li>
                         <li>
-                          <a href='#' class='govuk-link'>   Best Practice Network</a>
+                          <a href='#' class='govuk-link'>   Abbeyfield School</a>
                         </li>
                         <li>
-                          <a href='#' class='govuk-link'>   Capita</a>
+                          <a href='#' class='govuk-link'>   Abbey Green Nursery School & Children's Centre</a>
                         </li>
                         <li>
-                          <a href='#' class='govuk-link'>  National Institute of Teaching</a>
+                          <a href='#' class='govuk-link'>  Abbey Hill Academy</a>
                         </li>
                         <li>
-                          <a href='#' class='govuk-link'> Teach First</a>
+                          <a href='#' class='govuk-link'> Abbey Lane Primary School</a>
                         </li>
                       </ul>"
                     }
@@ -195,85 +193,191 @@ PROTOTYPE - Admin suppliers
                 
               {% endset -%}
 
-              {{ govukDetails({
-                summaryText: "Previous cohorts",
-                html: previousyearsHtml
+              {% set 2021Html %}
+              {{ govukSummaryList({
+                card: {
+                  title: {
+                    text: "2021"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "Change providers and cohorts",
+                        visuallyHiddenText: "for Armstrong-Kuhn"
+                      }
+                    ]
+                  }
+                },
+                rows: [
+                  {
+                    key: {
+                      text: "Lead providers"
+                    },
+                    value: {
+                      html: "<ul class='govuk-list govuk-list--bullet'>
+                        <li>
+                          <a href='../lead-provider/ambition-institute' class='govuk-link'>    Ambition Institute</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'>    Best Practice Network</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'>  Capita</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'>  National Institute of Teaching</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'>  Teach First</a>
+                        </li>
+                      </ul>"
+                    }
+                  },
+                  {
+                    key: {
+                      text: "Schools"
+                    },
+                    value: {
+                      html: "<ul class='govuk-list govuk-list--bullet'>
+                        <li>
+                          <a href='#' class='govuk-link'>    Abbey College Manchester</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'>   Abbeyfield School</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'>   Abbey Green Nursery School & Children's Centre</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'>  Abbey Hill Academy</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'> Abbey Lane Primary School</a>
+                        </li>
+                      </ul>"
+                    }
+                  }
+                ]
               }) }}
+                
+              {% endset -%}
+
+              {% set 2020Html %}
+              {{ govukSummaryList({
+                card: {
+                  title: {
+                    text: "2020"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "Change providers and cohorts",
+                        visuallyHiddenText: "for Armstrong-Kuhn"
+                      }
+                    ]
+                  }
+                },
+                rows: [
+                  {
+                    key: {
+                      text: "Lead providers"
+                    },
+                    value: {
+                      html: "<ul class='govuk-list govuk-list--bullet'>
+                        <li>
+                          <a href='../lead-provider/ambition-institute' class='govuk-link'>    Ambition Institute</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'>    Best Practice Network</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'>  Capita</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'>  National Institute of Teaching</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'>  Teach First</a>
+                        </li>
+                      </ul>"
+                    }
+                  },
+                  {
+                    key: {
+                      text: "Schools"
+                    },
+                    value: {
+                      html: "<ul class='govuk-list govuk-list--bullet'>
+                        <li>
+                          <a href='#' class='govuk-link'>    Abbey College Manchester</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'>   Abbeyfield School</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'>   Abbey Green Nursery School & Children's Centre</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'>  Abbey Hill Academy</a>
+                        </li>
+                        <li>
+                          <a href='#' class='govuk-link'> Abbey Lane Primary School</a>
+                        </li>
+                      </ul>"
+                    }
+                  }
+                ]
+              }) }}
+                
+              {% endset -%}
+
+             {{ govukAccordion({
+              id: "cohorts",
+              items: [
+                {
+                  heading: {
+                    text: "2023"
+                  },
+                  content: {
+                    html: 2023Html
+                  }
+                },
+                {
+                  heading: {
+                    text: "2022"
+                  },
+                  content: {
+                    html: 2022Html
+                  }
+                },
+                {
+                  heading: {
+                    text: "2021"
+                  },
+                  content: {
+                    html: 2021Html
+                  }
+                },
+                {
+                  heading: {
+                    text: "2020"
+                  },
+                  content: {
+                    html: 2020Html
+                  }
+                }
+              ]
+             }) }}
 
 
 
+             {{ govukButton({
+              text: "Delete",
+              classes: "govuk-button--warning"
+            }) }}
 
-              <div class="govuk-summary-card">
-                <div class="govuk-summary-card__title-wrapper">
-                  <h2 class="govuk-summary-card__title">Users</h2>
-                  <ul class="govuk-summary-card__actions">
-                    <li class="govuk-summary-card__action"> <a class="govuk-link" href="new-user-detail">
-                        Add a new user<span class="govuk-visually-hidden"> to Armstrong-Kuhn</span>
-                      </a>
-                    </li>
-                  
-                  </ul>
-                </div>
-                 
-                <div class="govuk-summary-card__content"> 
-                  <dl class="govuk-summary-list">
-                    {% if data['full-name-dp'] %}
-                    <div class="govuk-summary-list__row">
-                      <dt class="govuk-summary-list__key">
-                        {{ data['full-name-dp']}}
-                      </dt>
-                      <dd class="govuk-summary-list__value">
-                        {{ data['email-dp']}}
-                      </dd>
-                      <dd class="govuk-summary-list__actions">
-                        <a class="govuk-link" href="new-user-created">
-                          Change<span class="govuk-visually-hidden"> age</span>
-                        </a>
-                      </dd>
-                    </div>
-                    {% endif %}
-                    <div class="govuk-summary-list__row">
-                      <dt class="govuk-summary-list__key">
-                        Alan Bennett
-                      </dt>
-                      <dd class="govuk-summary-list__value">
-                        alan.bennett@email.com
-                      </dd>
-                      <dd class="govuk-summary-list__actions">
-                        <a class="govuk-link" href="#">
-                          Change<span class="govuk-visually-hidden"> Alan Bennett</span>
-                        </a>
-                      </dd>
-                    </div>
-                    <div class="govuk-summary-list__row">
-                      <dt class="govuk-summary-list__key">
-                        Bert Hungerford
-                      </dt>
-                      <dd class="govuk-summary-list__value">
-                        bert.hungerford@email.com
-                      </dd>
-                      <dd class="govuk-summary-list__actions">
-                        <a class="govuk-link" href="#">
-                          Change<span class="govuk-visually-hidden"> Bert Hungerford</span>
-                        </a>
-                      </dd>
-                    </div>
-                  </dl>
-                </div>
-              </div>
-
-
-
-
-
-
-
-
-
-            
-
-        
-       
 
       </form>
 
