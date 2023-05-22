@@ -19,75 +19,249 @@ PROTOTYPE - Admin suppliers
         Cummerata-Emmerich
       </h1>
 
-      <form class="form" action="/version-24/check-answers-1" method="post">
+      <ul class="app-subnav__list govuk-!-margin-bottom-9">
+        <li class="app-subnav__list-item app-subnav__list-item--selected">
+          <a class="govuk-link app-subnav__link govuk-link--no-visited-state app-subnav__list-item app-subnav__list-item--selected" aria-current="page" href="cummerata-emmerich">
+          Overview
+          <span class="govuk-visually-hidden">Current page</span>
+          </a>
+        </li>
+  
+        <li class="app-subnav__list-item">
+          <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="cummerata-emmerich-users">
+            All users
+          </a>
+        </li>
+    </ul>
 
        
       
 
-        {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+    {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
+
+    {% set 2023Html %}
+    {{ govukSummaryList({
+      card: {
+        title: {
+          text: "2023"
+        },
+        actions: {
+          items: [
+            {
               
-
-              {{ govukSummaryList({
-                card: {
-                  title: {
-                    text: "Users"
-                  },
-                  actions: {
-                    items: [
-                      {
-                        href: "#",
-                        text: "Add a new user",
-                        visuallyHiddenText: "for Armstrong-Kuhn"
-                      }
-                    ]
-                  }
-                },
-                rows: [
-                  {
-                    key: {
-                      text: "Alan Bennett"
-                    },
-                    value: {
-                      html: "alan.bennett@email.com"
-                    },
-                    actions: {
-                      items: [
-                        {
-                          href: "#",
-                          text: "Change",
-                          visuallyHiddenText: "Alan Bennett"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    key: {
-                      text: "Bert Hungerford"
-                    },
-                    value: {
-                      html: "bert.hungerford@email.com"
-                    },
-                    actions: {
-                      items: [
-                        {
-                          href: "#",
-                          text: "Change",
-                          visuallyHiddenText: "Bert Hungerford"
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }) }}
-
-
-            
-
-        
+            }
+          ]
+        }
+      },
+      rows: [
        
+        {
+          key: {
+            text: "Schools"
+          },
+          value: {
+            html: "<ul class='govuk-list govuk-list--bullet'>
+              <li>
+                <a href='#' class='govuk-link'>    Abbey College Manchester</a>
+              </li>
+              <li>
+                <a href='#' class='govuk-link'>   Abbeyfield School</a>
+              </li>
+              <li>
+                <a href='#' class='govuk-link'>  Abbey Green Nursery School & Children's Centre</a>
+              </li>
+              <li>
+                <a href='#' class='govuk-link'>  Abbey Hill Academy</a>
+              </li>
+              <li>
+                <a href='#' class='govuk-link'>  Abbey Lane Primary School</a>
+              </li>
+            </ul>"
+          }
+        }
+      ]
+    }) }}
+    {% endset -%}
 
-      </form>
+    {% set 2022Html %}
+    {{ govukSummaryList({
+      card: {
+        title: {
+          text: "2022"
+        },
+        actions: {
+          items: [
+            {
+              
+            }
+          ]
+        }
+      },
+      rows: [
+       
+        {
+          key: {
+            text: "Schools"
+          },
+          value: {
+            html: "<ul class='govuk-list govuk-list--bullet'>
+              <li>
+                <a href='#' class='govuk-link'>    Abbey College Manchester</a>
+              </li>
+              <li>
+                <a href='#' class='govuk-link'>   Abbeyfield School</a>
+              </li>
+              <li>
+                <a href='#' class='govuk-link'>  Abbey Green Nursery School & Children's Centre</a>
+              </li>
+              <li>
+                <a href='#' class='govuk-link'>  Abbey Hill Academy</a>
+              </li>
+              <li>
+                <a href='#' class='govuk-link'>  Abbey Lane Primary School</a>
+              </li>
+            </ul>"
+          }
+        }
+      ]
+    }) }}
+    {% endset -%}
+
+    {% set 2021Html %}
+    {{ govukSummaryList({
+      card: {
+        title: {
+          text: "2021"
+        },
+        actions: {
+          items: [
+            {
+              
+            }
+          ]
+        }
+      },
+      rows: [
+       
+        {
+          key: {
+            text: "Schools"
+          },
+          value: {
+            html: "<ul class='govuk-list govuk-list--bullet'>
+              <li>
+                <a href='#' class='govuk-link'>    Abbey College Manchester</a>
+              </li>
+              <li>
+                <a href='#' class='govuk-link'>   Abbeyfield School</a>
+              </li>
+              <li>
+                <a href='#' class='govuk-link'>  Abbey Green Nursery School & Children's Centre</a>
+              </li>
+              <li>
+                <a href='#' class='govuk-link'>  Abbey Hill Academy</a>
+              </li>
+              <li>
+                <a href='#' class='govuk-link'>  Abbey Lane Primary School</a>
+              </li>
+            </ul>"
+          }
+        }
+      ]
+    }) }}
+    {% endset -%}
+
+    {% set 2020Html %}
+    {{ govukSummaryList({
+      card: {
+        title: {
+          text: "2020"
+        },
+        actions: {
+          items: [
+            {
+              
+            }
+          ]
+        }
+      },
+      rows: [
+       
+        {
+          key: {
+            text: "Schools"
+          },
+          value: {
+            html: "<ul class='govuk-list govuk-list--bullet'>
+              <li>
+                <a href='#' class='govuk-link'>    Abbey College Manchester</a>
+              </li>
+              <li>
+                <a href='#' class='govuk-link'>   Abbeyfield School</a>
+              </li>
+              <li>
+                <a href='#' class='govuk-link'>  Abbey Green Nursery School & Children's Centre</a>
+              </li>
+              <li>
+                <a href='#' class='govuk-link'>  Abbey Hill Academy</a>
+              </li>
+              <li>
+                <a href='#' class='govuk-link'>  Abbey Lane Primary School</a>
+              </li>
+            </ul>"
+          }
+        }
+      ]
+    }) }}
+    {% endset -%}
+
+    {{ govukAccordion({
+      id: "cohorts",
+      items: [
+        {
+          heading: {
+            text: "2023",
+            Expanded: true
+          },
+          content: {
+            html: 2023Html
+          }
+        },
+        {
+          heading: {
+            text: "2022"
+          },
+          content: {
+            html: 2022Html
+          }
+        },
+        {
+          heading: {
+            text: "2021"
+          },
+          content: {
+            html: 2021Html
+          }
+        },
+        {
+          heading: {
+            text: "2020"
+          },
+          content: {
+            html: 2020Html
+          }
+        }
+      ]
+     }) }}
+
+
+
+     <p class="govuk-body">
+      <a href="#" class="govuk-link">Delete appropriate body</a>
+    </p>
+
+     
 
     </div>
   </div>

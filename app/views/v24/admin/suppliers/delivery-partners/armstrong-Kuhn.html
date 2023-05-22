@@ -74,7 +74,7 @@ PROTOTYPE - Admin suppliers
                     items: [
                       {
                         href: "#",
-                        text: "Change providers and cohorts",
+                        text: "",
                         visuallyHiddenText: "for Armstrong-Kuhn"
                       }
                     ]
@@ -133,7 +133,7 @@ PROTOTYPE - Admin suppliers
                     items: [
                       {
                         href: "#",
-                        text: "Change providers and cohorts",
+                        text: "",
                         visuallyHiddenText: "for Armstrong-Kuhn"
                       }
                     ]
@@ -203,7 +203,7 @@ PROTOTYPE - Admin suppliers
                     items: [
                       {
                         href: "#",
-                        text: "Change providers and cohorts",
+                        text: "",
                         visuallyHiddenText: "for Armstrong-Kuhn"
                       }
                     ]
@@ -273,7 +273,7 @@ PROTOTYPE - Admin suppliers
                     items: [
                       {
                         href: "#",
-                        text: "Change providers and cohorts",
+                        text: "",
                         visuallyHiddenText: "for Armstrong-Kuhn"
                       }
                     ]
@@ -338,7 +338,8 @@ PROTOTYPE - Admin suppliers
               items: [
                 {
                   heading: {
-                    text: "2023"
+                    text: "2023",
+                    Expanded: true
                   },
                   content: {
                     html: 2023Html
@@ -371,12 +372,15 @@ PROTOTYPE - Admin suppliers
               ]
              }) }}
 
-
-
              {{ govukButton({
-              text: "Delete",
-              classes: "govuk-button--warning"
-            }) }}
+              text: "Change providers and cohorts",
+              classes: "govuk-button--secondary"
+             }) }}
+
+              <p class="govuk-body">
+                <a href="#" class="govuk-link">Delete delivery partner</a>
+              </p>
+           
 
 
       </form>

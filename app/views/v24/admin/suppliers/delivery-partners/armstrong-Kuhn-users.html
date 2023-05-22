@@ -62,10 +62,7 @@ PROTOTYPE - Admin suppliers
                 <div class="govuk-summary-card__title-wrapper">
                   <h2 class="govuk-summary-card__title">Users</h2>
                   <ul class="govuk-summary-card__actions">
-                    <li class="govuk-summary-card__action"> <a class="govuk-link" href="new-user-detail">
-                        Add a new user<span class="govuk-visually-hidden"> to Armstrong-Kuhn</span>
-                      </a>
-                    </li>
+                   
                   
                   </ul>
                 </div>
@@ -116,11 +113,13 @@ PROTOTYPE - Admin suppliers
                   </dl>
                 </div>
               </div>
-
               {{ govukButton({
-                text: "Delete",
-                classes: "govuk-button--warning"
-              }) }}
+                text: "Add a new user",
+                classes: "govuk-button--secondary"
+               }) }}
+              <p class="govuk-body">
+                <a href="#" class="govuk-link">Delete delivery partner</a>
+              </p>
   
 
       </form>

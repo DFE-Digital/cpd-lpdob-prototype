@@ -1,0 +1,113 @@
+{% extends "layouts/main-nav.html" %}
+
+{% block pageTitle %}
+PROTOTYPE - Admin suppliers
+{% endblock %}
+
+
+
+{% block content %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()",
+  classes: "govuk-!-margin-top-1"
+}) }}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Appropriate body details</span>
+      <h1 class="govuk-heading-l">
+        Cummerata-Emmerich
+      </h1>
+
+    
+
+      <ul class="app-subnav__list govuk-!-margin-bottom-9">
+        <li class="app-subnav__list-item ">
+          <a class="govuk-link app-subnav__link govuk-link--no-visited-state app-subnav__list-item app-subnav__list-item--selected" aria-current="page" href="cummerata-emmerich">
+          Overview
+          
+          </a>
+        </li>
+  
+        <li class="app-subnav__list-item app-subnav__list-item--selected">
+          <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="cummerata-emmerich-users">
+            All users
+            <span class="govuk-visually-hidden">Current page</span>
+          </a>
+        </li>
+    </ul>
+      
+
+        {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+              
+
+              {{ govukSummaryList({
+                card: {
+                  title: {
+                    text: "Users"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "",
+                        visuallyHiddenText: "for Armstrong-Kuhn"
+                      }
+                    ]
+                  }
+                },
+                rows: [
+                  {
+                    key: {
+                      text: "Alan Bennett"
+                    },
+                    value: {
+                      html: "alan.bennett@email.com"
+                    },
+                    actions: {
+                      items: [
+                        {
+                          href: "#",
+                          text: "Change",
+                          visuallyHiddenText: "Alan Bennett"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    key: {
+                      text: "Bert Hungerford"
+                    },
+                    value: {
+                      html: "bert.hungerford@email.com"
+                    },
+                    actions: {
+                      items: [
+                        {
+                          href: "#",
+                          text: "Change",
+                          visuallyHiddenText: "Bert Hungerford"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }) }}
+
+
+              {{ govukButton({
+                text: "Add a new user",
+                classes: "govuk-button--secondary"
+               }) }}
+              <p class="govuk-body">
+                <a href="#" class="govuk-link">Delete appropriate body</a>
+              </p>
+  
+        
+       
+
+    </div>
+  </div>
+
+{% endblock %}

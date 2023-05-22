@@ -49,59 +49,18 @@
             </a>
           </dd>
         </div>
-        
         </dl>
 
        
-        <div class="govuk-summary-card">
-          <div class="govuk-summary-card__title-wrapper">
-            <h2 class="govuk-summary-card__title">Delivery partners</h2>
-           
-          </div>
-          <div class="govuk-summary-card__content">
-            <dl class="govuk-summary-list">
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Armstrong-Kuhn
-                </dt>
-               
-                <dd class="govuk-summary-list__actions">
-                  <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
-                    View<span class="govuk-visually-hidden">  Armstrong-Kuhn</span>
-                  </a>
-                </li>
-                <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
-                    Remove access<span class="govuk-visually-hidden"> to  Armstrong-Kuhn</span>
-                  </a>
-                </li>
-              </div>
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Barton-Kuhic
-                </dt>
-               
-                <dd class="govuk-summary-list__actions">
-                  <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
-                    View<span class="govuk-visually-hidden"> Barton-Kuhic</span>
-                  </a>
-                </li>
-                <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
-                    Remove access<span class="govuk-visually-hidden"> to Barton-Kuhic</span>
-                  </a>
-                </li>
-              </div>
-            </dl>
-          </div>
-        </div>
 
 
 
         <div class="govuk-summary-card">
           <div class="govuk-summary-card__title-wrapper">
-            <h2 class="govuk-summary-card__title">Lead providers</h2>
+            <h2 class="govuk-summary-card__title">Delivery partner</h2>
             <ul class="govuk-summary-card__actions">
               <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
-                  <span class="govuk-visually-hidden"> of Lead provider</span>
+                  Remove access<span class="govuk-visually-hidden"> of Delivery partner</span>
                 </a>
               </li>
             </ul>
@@ -110,18 +69,67 @@
             <dl class="govuk-summary-list">
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Capita
+                  Supplier
                 </dt>
-               
+                <dd class="govuk-summary-list__value">
+                  Armstrong-Kuhn
+                </dd>
                 <dd class="govuk-summary-list__actions">
-                  <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
-                    View<span class="govuk-visually-hidden"> Capita</span>
-                  </a>
-                </li>
-                <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
-                    Remove access<span class="govuk-visually-hidden"> to Capita</span>
-                  </a>
-                </li>
+                  
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 class="govuk-summary-card__title">Delivery partner</h2>
+            <ul class="govuk-summary-card__actions">
+              <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+                  Remove access<span class="govuk-visually-hidden"> of Delivery partner</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Supplier
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Barton-Kuhic
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                 
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 class="govuk-summary-card__title">Lead provider</h2>
+            <ul class="govuk-summary-card__actions">
+              <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+                  Remove access<span class="govuk-visually-hidden"> of Lead provider</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Supplier
+                </dt>
+                <dd class="govuk-summary-list__value">
+                 Capita
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  
                 </dd>
               </div>
             </dl>
@@ -129,12 +137,12 @@
         </div>
         
         {{ govukButton({
-          text: "Add access to another supplier",
-          classes: "govuk-button--secondary"
-         }) }}
-          <p class="govuk-body">
-          <a href="#" class="govuk-link">Delete user</a>
-          </p>     
+          text: "Delete user",
+          classes: "govuk-button--warning"
+        }) }}
+<p class="govuk-body">
+<a href="#" class="govuk-link">Do they need access to another service?</a>
+</p>     
 
       </form>
 
