@@ -1,0 +1,205 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+	Participant data – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+	<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+<main class="govuk-main-wrapper govuk-body" id="main-content" role="main">
+      <div class="govuk-grid-row">
+		<div class="govuk-grid-column-two-thirds">
+	<span class="govuk-caption-l">Participant</span>
+
+<h1 class="govuk-heading-l govuk-!-margin-bottom-9">Frederick Quo</h1>
+
+
+<ul class="app-subnav__list">
+	
+	<li class="app-subnav__list-item ">
+	  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-data-ect">
+		ECT
+	  </a>
+	</li>
+	<li class="app-subnav__list-item ">
+		<a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="participant-data-mentor">
+		  Mentor
+	 
+	  </a>
+	</li>
+	<li class="app-subnav__list-item app-subnav__list-item--selected">
+		<a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="participant-data-npq">
+		  NPQ
+	  <span class="govuk-visually-hidden">Current page</span>
+	  </a>
+	</li>
+</ul>
+<br><br>
+
+
+
+	{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+	{{ govukSummaryList({
+	  card: {
+		title: {
+		  text: "Overview"
+		},
+		actions: {
+		  items: [
+			{
+			  href: "",
+			  text: "",
+			  visuallyHiddenText: ""
+			}
+		  ]
+		}
+	  },
+	  rows: [
+	  {
+		key: {
+		  text: "Type"
+		},
+		value: {
+		  html: "Mentor"
+		}
+	  },
+		{
+		  key: {
+			text: "External ID"
+		  },
+		  value: {
+			html: "<a href='#' class='govuk-link'>72f96114-8e4d-89a7-a8ff-f211ea2b76f2</a>"
+		  }
+		},
+		{
+			key: {
+			  text: "User ID / Participant ID"
+			},
+			value: {
+			  html: "<a href='#' class='govuk-link'>72f96114-8e4d-89a7-a8ff-f211ea2b76f2</a>"
+			}
+		  }
+	  ]
+	}) }}
+	<h2 class="govuk-heading-l">
+		NPQ applications
+	</h2>
+	
+	
+	{{ govukSummaryList({
+		card: {
+		  title: {
+			text: "NPQ application 1"
+		  },
+		  actions: {
+			items: [
+			  {
+				href: "",
+				text: "",
+				visuallyHiddenText: ""
+			  }
+			]
+		  }
+		},
+		rows: [
+		 
+		  {
+			key: {
+			  text: "Application ID"
+			},
+			value: {
+			  html: "<a href='#' class='govuk-link'>1cbf0540-98bf-4061-a333-fbdb702a6cea</a>"
+			}
+		  },
+		 
+			{
+			  key: {
+				text: "Lead provider"
+			  },
+			  value: {
+				html: "	Ambition Institute"
+			  }
+			},
+			{
+				key: {
+				  text: "Lead provider approval status"
+				},
+				value: {
+				  html: "pending"
+				}
+			  },
+			{
+				key: {
+				  text: "NPQ course"
+				},
+				value: {
+				  html: "NPQ Leading Teaching (NPQLT)"
+				}
+			  },
+			  {
+				key: {
+				  text: "School URN"
+				},
+				value: {
+				  html: "141491 "
+				}
+			  },
+			  
+			  {
+				key: {
+				  text: "Targeted support funding eligibility"
+				},
+				value: {
+				  html: 
+				  "
+				  <strong class='govuk-tag govuk-tag--green'>
+					Yes
+				  </strong>
+				  "
+				}
+			  },
+			  
+			  {
+				  key: {
+					text: "Created at"
+				  },
+				  value: {
+					html: "5 May 2023, 10:18 AM"
+				  }
+				},
+				{
+				  key: {
+					text: "Updated at"
+				  },
+				  value: {
+					html: "5 May 2023, 10:18 AM"
+				  }
+				}
+		]
+	  }) }}
+  
+
+
+
+	
+	<h2 class="govuk-heading-l">
+		Declarations
+	</h2>
+	
+	<p class="govuk-body">
+		No declaration history
+	</p>
+	
+	
+	</div>
+	</div>
+	
+	
+	
+		</main>
+{% endblock %}

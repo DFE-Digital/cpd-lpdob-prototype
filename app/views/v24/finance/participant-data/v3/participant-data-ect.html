@@ -15,22 +15,28 @@
 		<div class="govuk-grid-column-two-thirds">
 	<span class="govuk-caption-l">Participant</span>
 	<h1 class="govuk-heading-l govuk-!-margin-bottom-9">Frederick Quo
-		<span class="govuk-caption-l"><b>User ID / Participant ID</b> - <a href='#' class='govuk-link'>72f96114-8e4d-89a7-a8ff-f211ea2b76f2</a></span>
+		
 	</h1>
 
 
 
 
 <ul class="app-subnav__list">
+	<li class="app-subnav__list-item app-subnav__list-item--selected">
+	  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-data-ect">
+		ECT
+	  </a>
+	</li>
 	<li class="app-subnav__list-item ">
 		<a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="participant-data-mentor">
 		  Mentor
 	  <span class="govuk-visually-hidden">Current page</span>
 	  </a>
 	</li>
-	<li class="app-subnav__list-item app-subnav__list-item--selected">
-	  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-data-ect">
-		Early career teacher
+	<li class="app-subnav__list-item ">
+		<a class="govuk-link app-subnav__link " aria-current="page" href="participant-data-npq">
+		  NPQ
+	  
 	  </a>
 	</li>
 </ul>
@@ -62,12 +68,21 @@
 			text: "Type"
 		  },
 		  value: {
-			html: "Mentor"
+			html: "Early career teacher"
 		  }
 		},
 		{
 			key: {
 			  text: "External ID"
+			},
+			value: {
+			  html: "<a href='#' class='govuk-link'>72f96114-8e4d-89a7-a8ff-f211ea2b76f2</a>"
+			}
+		  }
+		  ,
+		{
+			key: {
+			  text: "User ID / Participant ID"
 			},
 			value: {
 			  html: "<a href='#' class='govuk-link'>72f96114-8e4d-89a7-a8ff-f211ea2b76f2</a>"
