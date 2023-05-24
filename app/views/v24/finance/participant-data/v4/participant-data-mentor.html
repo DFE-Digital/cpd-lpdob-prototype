@@ -81,7 +81,7 @@
 			  text: "User ID / Participant ID"
 			},
 			value: {
-			  html: "<a href='#' class='govuk-link'>72f96114-8e4d-89a7-a8ff-f211ea2b76f2</a>"
+			  html: "<a href='#' class='govuk-link'>66f96114-9r462-84s7-a8ff-f21ed02af2</a>"
 			}
 		  }
 	  ]
@@ -216,12 +216,7 @@
 		]
 	  }) }}
   
-	  <h2 class="govuk-heading-l">
-		Induction records
-	</h2>
-
-
-	
+	  {% set inductionsHtml %}
 
 	{{ govukSummaryList({
 		card: {
@@ -341,13 +336,11 @@
 						  }
 		]
 	  }) }}
+	  {% endset -%}
 
 
-
+	  {% set declarationsHtml %}
 	
-	<h2 class="govuk-heading-l">
-		Declarations
-	</h2>
 	
 	{{ govukSummaryList({
 		card: {
@@ -821,7 +814,30 @@
 	</tr>
 	</tbody>
 	</table>
+	{% endset -%}
 	
+	
+	{{ govukAccordion({
+		id: "cohorts",
+		items: [
+		  {
+			heading: {
+			  text: "Induction records"
+			},
+			content: {
+			  html: inductionsHtml
+			}
+		  },
+		  {
+			heading: {
+			  text: "Declarations"
+			},
+			content: {
+			  html: declarationsHtml
+			}
+		  }
+		]
+	   }) }}
 	
 	
 	</div>

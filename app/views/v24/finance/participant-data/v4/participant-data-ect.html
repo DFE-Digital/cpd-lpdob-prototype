@@ -14,18 +14,20 @@
       <div class="govuk-grid-row">
 		<div class="govuk-grid-column-two-thirds">
 	<span class="govuk-caption-l">Participant</span>
+	<h1 class="govuk-heading-l govuk-!-margin-bottom-9">Frederick Quo
+		
+	</h1>
 
-<h1 class="govuk-heading-l govuk-!-margin-bottom-9">Frederick Quo</h1>
+
 
 
 <ul class="app-subnav__list">
-	
-	<li class="app-subnav__list-item ">
+	<li class="app-subnav__list-item app-subnav__list-item--selected">
 	  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-data-ect">
 		ECT
 	  </a>
 	</li>
-	<li class="app-subnav__list-item app-subnav__list-item--selected">
+	<li class="app-subnav__list-item ">
 		<a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="participant-data-mentor">
 		  Mentor
 	  <span class="govuk-visually-hidden">Current page</span>
@@ -60,28 +62,30 @@
 		}
 	  },
 	  rows: [
-	  {
-		key: {
-		  text: "Type"
-		},
-		value: {
-		  html: "Mentor"
-		}
-	  },
+		
 		{
 		  key: {
-			text: "External ID"
+			text: "Type"
 		  },
 		  value: {
-			html: "<a href='#' class='govuk-link'>72f96114-8e4d-89a7-a8ff-f211ea2b76f2</a>"
+			html: "Early career teacher"
 		  }
 		},
+		{
+			key: {
+			  text: "External ID"
+			},
+			value: {
+			  html: "<a href='#' class='govuk-link'>72f96114-8e4d-89a7-a8ff-f211ea2b76f2</a>"
+			}
+		  }
+		  ,
 		{
 			key: {
 			  text: "User ID / Participant ID"
 			},
 			value: {
-			  html: "<a href='#' class='govuk-link'>72f96114-8e4d-89a7-a8ff-f211ea2b76f2</a>"
+			  html: "<a href='#' class='govuk-link'>66f96114-9r462-84s7-a8ff-f21ed02af2</a>"
 			}
 		  }
 	  ]
@@ -216,17 +220,15 @@
 		]
 	  }) }}
   
-	  <h2 class="govuk-heading-l">
-		Induction records
-	</h2>
+	  
 
 
-	
+	{% set inductionsHtml %}
 
 	{{ govukSummaryList({
 		card: {
 		  title: {
-			text: "Induction ID: 9a2490cf-21ec-40f7-8f4c-ab6e60b33d1c"
+			text: "Induction record: 9a2490cf-21ec-40f7-8f4c-ab6e60b33d1c"
 		  },
 		  actions: {
 			items: [
@@ -341,18 +343,16 @@
 						  }
 		]
 	  }) }}
+	  {% endset %}
 
 
-
+	  {% set declarationsHtml %}
 	
-	<h2 class="govuk-heading-l">
-		Declarations
-	</h2>
 	
 	{{ govukSummaryList({
 		card: {
 		  title: {
-			text: "Declaration ID: 157cbf42-d91a-401a-9acc-4eaac8adf480"
+			text: "Declaration ID 157cbf42-d91a-401a-9acc-4eaac8adf480"
 		  },
 		  actions: {
 			items: [
@@ -365,8 +365,14 @@
 		  }
 		},
 		rows: [
-		  
-		
+		  {
+			key: {
+			  text: "Declaration ID"
+			},
+			value: {
+			  html: "	157cbf42-d91a-401a-9acc-4eaac8adf480>"
+			}
+		  },
 		  {
 			key: {
 			  text: "Declaration type"
@@ -474,7 +480,7 @@
 	{{ govukSummaryList({
 		card: {
 		  title: {
-			text: "Declaration ID: 758e5ed2-ef80-4599-80c2-9af3932f4919"
+			text: "758e5ed2-ef80-4599-80c2-9af3932f4919"
 		  },
 		  actions: {
 			items: [
@@ -487,7 +493,14 @@
 		  }
 		},
 		rows: [
-		 
+		  {
+			key: {
+			  text: "Declaration ID"
+			},
+			value: {
+			  html: "758e5ed2-ef80-4599-80c2-9af3932f4919"
+			}
+		  },
 		  {
 			key: {
 			  text: "Declaration type"
@@ -592,7 +605,7 @@
 	{{ govukSummaryList({
 		card: {
 		  title: {
-			text: "Declaration ID: eef32a20-e9bf-40ec-91af-af6d3c78aa20"
+			text: "eef32a20-e9bf-40ec-91af-af6d3c78aa20"
 		  },
 		  actions: {
 			items: [
@@ -605,6 +618,14 @@
 		  }
 		},
 		rows: [
+		  {
+			key: {
+			  text: "Declaration ID"
+			},
+			value: {
+			  html: "eef32a20-e9bf-40ec-91af-af6d3c78aa20"
+			}
+		  },
 		  {
 			key: {
 			  text: "Declaration type"
@@ -710,7 +731,7 @@
 	{{ govukSummaryList({
 		card: {
 		  title: {
-			text: "Declaration ID: e5d664ce-11b1-4641-a46f-1de82dc60465"
+			text: "e5d664ce-11b1-4641-a46f-1de82dc60465"
 		  },
 		  actions: {
 			items: [
@@ -723,7 +744,15 @@
 		  }
 		},
 		rows: [
-		 {
+		  {
+			key: {
+			  text: "Declaration ID"
+			},
+			value: {
+			  html: "e5d664ce-11b1-4641-a46f-1de82dc60465"
+			}
+		  },
+		  {
 			key: {
 			  text: "Declaration type"
 			},
@@ -789,6 +818,9 @@
 						}
 					]
 				}) }}
+	
+	
+	 
 	<table class="govuk-table">
 	  <caption class="govuk-table__caption govuk-table__caption--s govuk-heading-s">Declaration State History</caption>
 	  <thead class="govuk-table__head">
@@ -821,8 +853,32 @@
 	</tr>
 	</tbody>
 	</table>
+	{% endset -%}
 	
-	
+	{{ govukAccordion({
+		id: "cohorts",
+		items: [
+		  {
+			heading: {
+			  text: "Induction records"
+			},
+			content: {
+			  html: inductionsHtml
+			}
+		  },
+		  {
+			heading: {
+			  text: "Declarations"
+			},
+			content: {
+			  html: declarationsHtml
+			}
+		  }
+		]
+	   }) }}
+
+
+
 	
 	</div>
 	</div>
