@@ -17,14 +17,12 @@ New user – {{ serviceName }} – GOV.UK Prototype Kit
           
             <h1 class="govuk-heading-l">
               <span class="govuk-caption-l">Add a new user</span>
-            User detals
+              Enter their details
             </h1>
          
     
             <form class="form" action="new-user-check-answer" method="post">
-<h2 class="govuk-heading-m">
-  What is their name and email?
-</h2>
+
       {{ govukInput({
         id: "full-name-dp",
         name: "full-name-dp",
@@ -40,9 +38,7 @@ New user – {{ serviceName }} – GOV.UK Prototype Kit
         }
       }) }}
       
-      <h2 class="govuk-heading-m">
-        Which supplier do they work for?
-      </h2>
+     
       {{ govukInput({
         id: "supplier",
         name: "supplier",

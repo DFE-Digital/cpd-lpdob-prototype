@@ -86,6 +86,127 @@
 		  }
 	  ]
 	}) }}
+
+
+	{{ govukSummaryList({
+		card: {
+		  title: {
+			text: "Participant profile"
+		  },
+		  actions: {
+			items: [
+			  {
+				href: "",
+				text: "",
+				visuallyHiddenText: ""
+			  }
+			]
+		  }
+		},
+		rows: [
+		 
+		  {
+			key: {
+			  text: "Profile ID"
+			},
+			value: {
+			  html: "<a href='#' class='govuk-link'>1cbf0540-98bf-4061-a333-fbdb702a6cea</a>"
+			}
+		  },
+		  {
+			  key: {
+				text: "Eligible for funding"
+			  },
+			  value: {
+				html: "TRUE"
+			  }
+			},
+			{
+				key: {
+				  text: "NPQ course"
+				},
+				value: {
+				  html: "NPQ Leading Teaching (NPQLT)"
+				}
+			  },
+			{
+			  key: {
+				text: "Lead provider"
+			  },
+			  value: {
+				html: "	Ambition Institute"
+			  }
+			},
+			{
+				key: {
+				  text: "School URN"
+				},
+				value: {
+				  html: "115018"
+				}
+			  },
+			  {
+				key: {
+				  text: "Status"
+				},
+				value: {
+				  html: "active "
+				}
+			  },
+			  {
+				key: {
+				  text: "Training status"
+				},
+				value: {
+				  html: "active "
+				},
+				actions: {
+				  items: [
+					{
+					  href: "#",
+					  text: "Change",
+					  visuallyHiddenText: "delivery partner ID"
+					}
+				  ]
+				}
+			  },
+			 
+				{
+					key: {
+					  text: "Schedule identifier"
+					},
+					value: {
+					  html: "npq-leadership-spring"
+					}
+				  },
+				  {
+					key: {
+					  text: "Schedule cohort"
+					},
+					value: {
+					  html: "2021"
+					}
+				  },
+				  {
+					  key: {
+						text: "Created at"
+					  },
+					  value: {
+						html: "5 May 2023, 10:18 AM"
+					  }
+					},
+					{
+					  key: {
+						text: "Updated at"
+					  },
+					  value: {
+						html: "5 May 2023, 10:18 AMM"
+					  }
+					}
+		]
+	  }) }}
+
+
 	<h2 class="govuk-heading-l">
 		NPQ applications
 	</h2>
@@ -141,14 +262,7 @@
 				  html: "NPQ Leading Teaching (NPQLT)"
 				}
 			  },
-			  {
-				key: {
-				  text: "School URN"
-				},
-				value: {
-				  html: "141491 "
-				}
-			  },
+			 
 			  
 			  {
 				key: {
