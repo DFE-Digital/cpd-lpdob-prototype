@@ -57,7 +57,6 @@ PROTOTYPE - Admin suppliers
     
       </ul>
        
-      
       {{ govukButton({
         text: "Change providers and cohorts"
        }) }}
@@ -65,32 +64,9 @@ PROTOTYPE - Admin suppliers
         {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
               
-        {% set schoolsHtml %}
-        {{ govukDetails({
-          summaryText: "Schools for this cohort",
-          html: 
-          "
-          <ul class='govuk-list'>
-            <li>
-              <a href='#' class='govuk-link'>    Abbey College Manchester</a>
-            </li>
-            <li>
-              <a href='#' class='govuk-link'>   Abbeyfield School</a>
-            </li>
-            <li>
-              <a href='#' class='govuk-link'>   Abbey Green Nursery School & Children's Centre</a>
-            </li>
-            <li>
-              <a href='#' class='govuk-link'>  Abbey Hill Academy</a>
-            </li>
-            <li>
-              <a href='#' class='govuk-link'> Abbey Lane Primary School</a>
-            </li>
-          </ul>
-          "
-        }) }}
-    {% endset %}
-             
+
+
+              {% set 2023Html %}
               {{ govukSummaryList({
                 card: {
                   title: {
@@ -124,19 +100,13 @@ PROTOTYPE - Admin suppliers
                         </li>
                       </ul>"
                     }
-                  },
-                  {
-                    key: {
-                      text: "Schools"
-                    },
-                    value: {
-                      html: schoolsHtml
-                    }
                   }
                 ]
               }) }}
                 
-             
+              {% endset -%}
+
+              {% set 2022Html %}
               {{ govukSummaryList({
                 card: {
                   title: {
@@ -176,19 +146,13 @@ PROTOTYPE - Admin suppliers
                         </li>
                       </ul>"
                     }
-                  },
-                  {
-                    key: {
-                      text: "Schools"
-                    },
-                    value: {
-                      html: schoolsHtml
-                    }
                   }
                 ]
               }) }}
                 
-             
+              {% endset -%}
+
+              {% set 2021Html %}
               {{ govukSummaryList({
                 card: {
                   title: {
@@ -210,7 +174,7 @@ PROTOTYPE - Admin suppliers
                       text: "Lead providers"
                     },
                     value: {
-                      html: "<ul class='govuk-list'>
+                      html: "<ul class='govuk-list '>
                         <li>
                           <a href='../lead-provider/ambition-institute' class='govuk-link'>    Ambition Institute</a>
                         </li>
@@ -228,19 +192,13 @@ PROTOTYPE - Admin suppliers
                         </li>
                       </ul>"
                     }
-                  },
-                  {
-                    key: {
-                      text: "Schools"
-                    },
-                    value: {
-                      html: schoolsHtml
-                    }
                   }
                 ]
               }) }}
                 
-             
+              {% endset -%}
+
+              {% set 2020Html %}
               {{ govukSummaryList({
                 card: {
                   title: {
@@ -262,7 +220,7 @@ PROTOTYPE - Admin suppliers
                       text: "Lead providers"
                     },
                     value: {
-                      html: "<ul class='govuk-list govuk-list--bullet'>
+                      html: "<ul class='govuk-list '>
                         <li>
                           <a href='../lead-provider/ambition-institute' class='govuk-link'>    Ambition Institute</a>
                         </li>
@@ -280,21 +238,52 @@ PROTOTYPE - Admin suppliers
                         </li>
                       </ul>"
                     }
-                  },
-                  {
-                    key: {
-                      text: "Schools"
-                    },
-                    value: {
-                      html: schoolsHtml
-                    }
                   }
                 ]
               }) }}
                 
-             
+              {% endset -%}
 
-             
+             {{ govukAccordion({
+              id: "cohorts",
+              items: [
+                {
+                  heading: {
+                    text: "2023"
+                  },
+                  content: {
+                    html: 2023Html,
+                    expanded: true
+                  }
+                },
+                {
+                  heading: {
+                    text: "2022"
+                  },
+                  content: {
+                    html: 2022Html
+                  }
+                },
+                {
+                  heading: {
+                    text: "2021"
+                  },
+                  content: {
+                    html: 2021Html
+                  }
+                },
+                {
+                  heading: {
+                    text: "2020"
+                  },
+                  content: {
+                    html: 2020Html
+                  }
+                }
+              ]
+             }) }}
+
+            
 
               <p class="govuk-body">
                 <a href="#" class="govuk-link">Delete delivery partner</a>

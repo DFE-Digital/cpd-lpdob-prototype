@@ -40,7 +40,7 @@ PROTOTYPE - Admin suppliers
     {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
 
-    {% set 2023Html %}
+   
     {{ govukSummaryList({
       card: {
         title: {
@@ -82,9 +82,7 @@ PROTOTYPE - Admin suppliers
         }
       ]
     }) }}
-    {% endset -%}
-
-    {% set 2022Html %}
+    
     {{ govukSummaryList({
       card: {
         title: {
@@ -126,9 +124,7 @@ PROTOTYPE - Admin suppliers
         }
       ]
     }) }}
-    {% endset -%}
-
-    {% set 2021Html %}
+   
     {{ govukSummaryList({
       card: {
         title: {
@@ -170,9 +166,7 @@ PROTOTYPE - Admin suppliers
         }
       ]
     }) }}
-    {% endset -%}
-
-    {% set 2020Html %}
+   
     {{ govukSummaryList({
       card: {
         title: {
@@ -214,46 +208,9 @@ PROTOTYPE - Admin suppliers
         }
       ]
     }) }}
-    {% endset -%}
+   
 
-    {{ govukAccordion({
-      id: "cohorts",
-      items: [
-        {
-          heading: {
-            text: "2023"
-          },
-          content: {
-            html: 2023Html,
-            expanded: true
-          }
-        },
-        {
-          heading: {
-            text: "2022"
-          },
-          content: {
-            html: 2022Html
-          }
-        },
-        {
-          heading: {
-            text: "2021"
-          },
-          content: {
-            html: 2021Html
-          }
-        },
-        {
-          heading: {
-            text: "2020"
-          },
-          content: {
-            html: 2020Html
-          }
-        }
-      ]
-     }) }}
+   
 
 
 

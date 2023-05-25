@@ -42,74 +42,40 @@ PROTOTYPE - Admin suppliers
     </ul>
 
 
-        {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
-
-        
-
-      
-              {{ govukSummaryList({
-                card: {
-                  title: {
-                    text: "Users"
-                  },
-                  actions: {
-                    items: [
-                      {
-                        href: "#",
-                        text: "",
-                        visuallyHiddenText: "for Armstrong-Kuhn"
-                      }
-                    ]
-                  }
-                },
-                rows: [
-                  {
-                    key: {
-                      text: "Alan Bennett"
-                    },
-                    value: {
-                      html: "alan.bennett@email.com"
-                    },
-                    actions: {
-                      items: [
-                        {
-                          href: "#",
-                          text: "Change",
-                          visuallyHiddenText: "Alan Bennett"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    key: {
-                      text: "Bert Hungerford"
-                    },
-                    value: {
-                      html: "bert.hungerford@email.com"
-                    },
-                    actions: {
-                      items: [
-                        {
-                          href: "#",
-                          text: "Change",
-                          visuallyHiddenText: "Bert Hungerford"
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }) }}
+    {{ govukButton({
+      text: "Add a new user",
+      href: "new-user-detail"
+     }) }}
 
 
-            
-              {{ govukButton({
-                text: "Add a new user",
-                classes: "govuk-button--secondary"
-               }) }}
-              <p class="govuk-body">
-                <a href="#" class="govuk-link">Delete lead provider</a>
-              </p>
-  
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Alan Bennett
+        </dt>
+        <dd class="govuk-summary-list__value">
+          alan.bennett@email.com
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            View<span class="govuk-visually-hidden"> Alan Bennett</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Bert Hungerford
+        </dt>
+        <dd class="govuk-summary-list__value">
+          bert.hungerford@email.com
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            View<span class="govuk-visually-hidden"> Bert Hungerfordh</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
        
 
       </form>

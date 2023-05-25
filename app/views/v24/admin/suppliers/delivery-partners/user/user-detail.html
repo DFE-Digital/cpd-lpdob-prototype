@@ -15,6 +15,24 @@
   <div class="govuk-grid-row govuk-!-margin-top-3">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
+      {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+      {% set html %}
+      <h3 class="govuk-notification-banner__heading">
+        New user access added
+      </h3>
+     <p class='govuk-body'>
+      <a href='#' class="govuk-link">[supplier name]</a> has been added as access for Alan Bennett
+     </p>
+       
+      {% endset %}
+      
+      {{ govukNotificationBanner({
+        html: html,
+        type: 'success'
+      }) }}
+
+
       <h1 class="govuk-heading-l">
         <span class="govuk-caption-l">User</span>
         Alan Bennett
