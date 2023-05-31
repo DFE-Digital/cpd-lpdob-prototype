@@ -1,0 +1,41 @@
+{% extends "layouts/main-nav.html" %}
+
+{% block pageTitle %}
+  User details – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()",
+    classes: "govuk-!-margin-top-1"
+  }) }}
+
+  <form class="form" action="all-users" method="post">
+  <div class="govuk-grid-row govuk-!-margin-top-3">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+     
+
+
+      <h1 class="govuk-heading-l">
+        
+        Are you sure you want to remove [name]'s access to [DP/LP/AB]? 
+      </h1>
+      
+
+        
+        {{ govukButton({
+          text: "Remove access",
+          classes: "govuk-button--warning"
+         }) }}
+         {{ govukButton({
+          text: "Back",
+          classes: "govuk-button--secondary"
+         }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

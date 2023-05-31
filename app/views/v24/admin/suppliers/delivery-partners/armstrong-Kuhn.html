@@ -59,13 +59,13 @@ PROTOTYPE - Admin suppliers
        
       
       {{ govukButton({
-        text: "Change providers and cohorts"
+        text: "Update  provider setup"
        }) }}
 
         {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
               
-        {% set schoolsHtml %}
+        <!--{% set schoolsHtml %}
         {{ govukDetails({
           summaryText: "Schools for this cohort",
           html: 
@@ -89,7 +89,7 @@ PROTOTYPE - Admin suppliers
           </ul>
           "
         }) }}
-    {% endset %}
+    {% endset %}-->
              
               {{ govukSummaryList({
                 card: {
@@ -123,14 +123,6 @@ PROTOTYPE - Admin suppliers
                           <a href='#' class='govuk-link'>  Capita</a>
                         </li>
                       </ul>"
-                    }
-                  },
-                  {
-                    key: {
-                      text: "Schools"
-                    },
-                    value: {
-                      html: schoolsHtml
                     }
                   }
                 ]
@@ -176,14 +168,6 @@ PROTOTYPE - Admin suppliers
                         </li>
                       </ul>"
                     }
-                  },
-                  {
-                    key: {
-                      text: "Schools"
-                    },
-                    value: {
-                      html: schoolsHtml
-                    }
                   }
                 ]
               }) }}
@@ -228,14 +212,6 @@ PROTOTYPE - Admin suppliers
                         </li>
                       </ul>"
                     }
-                  },
-                  {
-                    key: {
-                      text: "Schools"
-                    },
-                    value: {
-                      html: schoolsHtml
-                    }
                   }
                 ]
               }) }}
@@ -262,7 +238,7 @@ PROTOTYPE - Admin suppliers
                       text: "Lead providers"
                     },
                     value: {
-                      html: "<ul class='govuk-list govuk-list--bullet'>
+                      html: "<ul class='govuk-list '>
                         <li>
                           <a href='../lead-provider/ambition-institute' class='govuk-link'>    Ambition Institute</a>
                         </li>
@@ -279,14 +255,6 @@ PROTOTYPE - Admin suppliers
                           <a href='#' class='govuk-link'>  Teach First</a>
                         </li>
                       </ul>"
-                    }
-                  },
-                  {
-                    key: {
-                      text: "Schools"
-                    },
-                    value: {
-                      html: schoolsHtml
                     }
                   }
                 ]
