@@ -13,9 +13,9 @@
 <main class="govuk-main-wrapper govuk-body" id="main-content" role="main">
       <div class="govuk-grid-row">
 		<div class="govuk-grid-column-two-thirds">
-	<span class="govuk-caption-l">Participant</span>
+	<span class="govuk-caption-xl">Participant</span>
 
-<h1 class="govuk-heading-l govuk-!-margin-bottom-9">Frederick Quo</h1>
+<h1 class="govuk-heading-xl govuk-!-margin-bottom-9">Frederick Quo</h1>
 
 
 <ul class="app-subnav__list">
@@ -63,7 +63,7 @@
         items: [
           {
             href: "#",
-            text: "Copy ID",
+            text: "Copy ",
             visuallyHiddenText: "date of birth"
           }
         ]
@@ -80,7 +80,7 @@
         items: [
           {
             href: "#",
-            text: "Copy ID",
+            text: "Copy ",
             visuallyHiddenText: "address"
           }
         ]
@@ -105,7 +105,7 @@
 		  items: [
 			{
 			  href: "#",
-			  text: "Copy ID",
+			  text: "Copy ",
 			  visuallyHiddenText: "date of birth"
 			}
 		  ]
@@ -146,7 +146,7 @@
 		  items: [
 			{
 			  href: "#",
-			  text: "Copy ID",
+			  text: "Copy ",
 			  visuallyHiddenText: "address"
 			}
 		  ]
@@ -173,7 +173,10 @@
 		  text: "Status"
 		},
 		value: {
-		  html: "Active"
+		  html: " 
+		  <strong class='govuk-tag govuk-tag--green'>
+			Active	
+		  </strong>"
 		}
 	  },
 	  {
@@ -181,7 +184,12 @@
 		  text: "Training status"
 		},
 		value: {
-		  html: "Active"
+		  html: 
+		  "
+		  <strong class='govuk-tag govuk-tag--green'>
+			Active	
+		  </strong>
+		  "
 		},
 		actions: {
 		  items: [
@@ -234,20 +242,7 @@
 	</h2>
 	
 	{{ govukSummaryList({
-		card: {
-		  title: {
-			text: "e5d664ce-11b1-4641-a46f-1de82dc60465"
-		  },
-		  actions: {
-			items: [
-			  {
-				href: "",
-				text: "",
-				visuallyHiddenText: ""
-			  }
-			]
-		  }
-		},
+		
 		rows: [
 		  {
 			key: {
@@ -327,7 +322,7 @@
 	
 	 
 	<table class="govuk-table">
-	  <caption class="govuk-table__caption govuk-table__caption--s govuk-heading-s">Declaration State History</caption>
+	  <caption class="govuk-table__caption govuk-table__caption--m govuk-heading-m">Declaration State History</caption>
 	  <thead class="govuk-table__head">
 		<tr class="govuk-table__row">
 		<th class="govuk-table__header">State</th>
@@ -362,21 +357,11 @@
 	<h2 class="govuk-heading-l">
 		NPQ applications
 	</h2>
+	<h3 class="govuk-heading-m">
+		Application 1
+	</h3>
 	{{ govukSummaryList({
-		card: {
-		  title: {
-			text: "NPQ application 1"
-		  },
-		  actions: {
-			items: [
-			  {
-				href: "",
-				text: "",
-				visuallyHiddenText: ""
-			  }
-			]
-		  }
-		},
+		
 		rows: [
 		 
 		  {
@@ -464,21 +449,13 @@
 		]
 	  }) }}
 	
+
+<h3 class="govuk-heading-m">
+	Application 2
+</h3>
+
 	{{ govukSummaryList({
-		card: {
-		  title: {
-			text: "NPQ application 2"
-		  },
-		  actions: {
-			items: [
-			  {
-				href: "",
-				text: "",
-				visuallyHiddenText: ""
-			  }
-			]
-		  }
-		},
+		
 		rows: [
 		 
 		  {
