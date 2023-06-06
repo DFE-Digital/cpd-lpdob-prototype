@@ -1,0 +1,591 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+	Participant data – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+	<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+<main class="govuk-main-wrapper govuk-body" id="main-content" role="main">
+      <div class="govuk-grid-row">
+		<div class="govuk-grid-column-two-thirds">
+	<span class="govuk-caption-xl">Participant</span>
+
+<h1 class="govuk-heading-xl govuk-!-margin-bottom-9">Frederick Quo</h1>
+
+
+<ul class="app-subnav__list">
+	
+	<li class="app-subnav__list-item ">
+	  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-data-ect">
+		ECT
+	  </a>
+	</li>
+	<li class="app-subnav__list-item ">
+		<a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="participant-data-mentor">
+		  Mentor
+	 
+	  </a>
+	</li>
+	<li class="app-subnav__list-item app-subnav__list-item--selected">
+		<a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="participant-data-npq">
+		  NPQ
+	  <span class="govuk-visually-hidden">Current page</span>
+	  </a>
+	</li>
+</ul>
+<br><br>
+<h2 class="govuk-heading-l">
+	Overview
+</h2>
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Type"
+      },
+      value: {
+        text: "NPQ"
+      }
+    },
+    {
+      key: {
+        text: "External ID"
+      },
+      value: {
+        html: "72f96114-8e4d-89a7-a8ff-f211ea2b76f2"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Copy ",
+            visuallyHiddenText: "date of birth"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "User ID / Participant ID"
+      },
+      value: {
+        html: "72f96114-8e4d-89a7-a8ff-f211ea2b76f2"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Copy ",
+            visuallyHiddenText: "address"
+          }
+        ]
+      }
+    }
+  ]
+}) }}
+
+<h2 class="govuk-heading-l">
+	Profile
+</h2>
+{{ govukSummaryList({
+	rows: [
+	  {
+		key: {
+		  text: "Profile ID"
+		},
+		value: {
+		  html: "1cbf0540-98bf-4061-a333-fbdb702a6cea"
+		},
+		actions: {
+		  items: [
+			{
+			  href: "#",
+			  text: "Copy ",
+			  visuallyHiddenText: "date of birth"
+			}
+		  ]
+		}
+	  },
+	  {
+		key: {
+		  text: "Eligible for funding"
+		},
+		value: {
+		  html: "True"
+		}
+	  },
+	  {
+		key: {
+		  text: "NPQ course"
+		},
+		value: {
+		  html: "NPQ Leading Teaching (NPQLT)"
+		}
+	  },
+	  {
+		key: {
+		  text: "Lead provider"
+		},
+		value: {
+		  html: "Ambition Institute"
+		}
+	  },
+	  {
+		key: {
+		  text: "School ID"
+		},
+		value: {
+		  html: "<a href='#' class='govuk-link'>dd4a11347-8e4d-89a7-a8ff-f211ea2b7</a>"
+		},
+		actions: {
+		  items: [
+			{
+			  href: "#",
+			  text: "Copy ",
+			  visuallyHiddenText: "address"
+			}
+		  ]
+		}
+	  },
+	  {
+		key: {
+		  text: "School URN"
+		},
+		value: {
+		  html: "115018"
+		}
+	  },
+	  {
+		key: {
+		  text: "Delivery partner ID"
+		},
+		value: {
+		  html: "db424-b7b7-454f-a8ff-f2ee6897"
+		}
+	  },
+	  {
+		key: {
+		  text: "Status"
+		},
+		value: {
+		  html: " 
+		  <strong class='govuk-tag govuk-tag--green'>
+			Active	
+		  </strong>"
+		}
+	  },
+	  {
+		key: {
+		  text: "Training status"
+		},
+		value: {
+		  html: 
+		  "
+		  <strong class='govuk-tag govuk-tag--green'>
+			Active	
+		  </strong>
+		  "
+		},
+		actions: {
+		  items: [
+			{
+			  href: "#",
+			  text: "Change",
+			  visuallyHiddenText: "address"
+			}
+		  ]
+		}
+	  },
+	  {
+		key: {
+		  text: "Schedule identifier"
+		},
+		value: {
+		  html: "npq-leadership-spring"
+		}
+	  },
+	  {
+		key: {
+		  text: "Schedule cohort"
+		},
+		value: {
+		  html: "2021"
+		}
+	  },
+	  {
+		key: {
+		  text: "Created at"
+		},
+		value: {
+		  html: "9 February 2022, 2:24 PM"
+		}
+	  },
+	  {
+		key: {
+		  text: "Updated at"
+		},
+		value: {
+		  html: "13 March 2023, 11:52 AM"
+		}
+	  }
+	]
+  }) }}
+
+
+	  <h2 class="govuk-heading-l">
+		Declarations
+	</h2>
+	
+	{{ govukSummaryList({
+		
+		rows: [
+		  {
+			key: {
+			  text: "Declaration ID"
+			},
+			value: {
+			  html: "2c579682-5545-4f69-8299-f4fda60465"
+			}
+		  },
+		  {
+			key: {
+			  text: "Declaration type"
+			},
+			value: {
+			  html: "started"
+			}
+		  },
+		  {
+			key: {
+			text: "Declaration date"
+			 },
+			 value: {
+			html: "29 April 2022, 6:47 PM"
+			 }
+			},
+			{
+			  key: {
+			  text: "Course identifier"
+			   },
+			   value: {
+			  html: "	npq-leadership-spring"
+			   }
+			  },
+			  {
+				key: {
+				text: "Evidence held"
+				 },
+				 value: {
+				html: "	"
+				 }
+				},
+				{
+				  key: {
+				  text: "Lead provider"
+				   },
+				   value: {
+				  html: "Ambition Institute"
+				   }
+				  },
+				  {
+					key: {
+					text: "State"
+					 },
+					 value: {
+					html: "Paid"
+					 }
+					},
+					{
+					  key: {
+					  text: "Created at"
+					   },
+					   value: {
+					  html: "29 April 2023, 6:51 PM"
+					   }
+					  },
+					  {
+						key: {
+						text: "Updated at"
+						 },
+						 value: {
+						html: "20 May 2023, 11:15 AM"
+						 }
+						}
+					]
+				}) }}
+	
+	
+	 
+	<table class="govuk-table">
+	  <caption class="govuk-table__caption govuk-table__caption--m govuk-heading-m">Declaration State History</caption>
+	  <thead class="govuk-table__head">
+		<tr class="govuk-table__row">
+		<th class="govuk-table__header">State</th>
+		<th class="govuk-table__header">Changed at</th>
+		<th class="govuk-table__header govuk-table__header--numeric">Reason</th>
+	</tr>
+	</thead>
+		<tbody class="govuk-table__body">
+		<tr class="govuk-table__row">
+		<td class="govuk-table__cell">paid</td>
+		<td class="govuk-table__cell">20 May 2023, 11:15 AM</td>
+		<td class="govuk-table__cell govuk-table__cell--numeric">N/A</td>
+	</tr>
+		<tr class="govuk-table__row">
+		<td class="govuk-table__cell">payable</td>
+		<td class="govuk-table__cell">1 May 2023, 12:03 AM</td>
+		<td class="govuk-table__cell govuk-table__cell--numeric">N/A</td>
+	</tr>
+		<tr class="govuk-table__row">
+		<td class="govuk-table__cell">eligible</td>
+		<td class="govuk-table__cell">29 April 2023,  6:51 PM</td>
+		<td class="govuk-table__cell govuk-table__cell--numeric">N/A</td>
+	</tr>
+		<tr class="govuk-table__row">
+		<td class="govuk-table__cell">submitted</td>
+		<td class="govuk-table__cell">29 April 2023,  6:51 PM</td>
+		<td class="govuk-table__cell govuk-table__cell--numeric">N/A</td>
+	</tr>
+	</tbody>
+	</table>
+
+	<h2 class="govuk-heading-l">
+		NPQ applications
+	</h2>
+	<h3 class="govuk-heading-m">
+		Application 1
+	</h3>
+	{{ govukSummaryList({
+		
+		rows: [
+		 
+		  {
+			key: {
+			  text: "Application ID"
+			},
+			value: {
+			  html: "<a href='#' class='govuk-link'>1cbf0540-98bf-4061-a333-fbdb73eed013f</a>"
+			}
+		  },
+		 
+			{
+			  key: {
+				text: "Lead provider"
+			  },
+			  value: {
+				html: "	UCL Institute of Education"
+			  }
+			},
+			{
+				key: {
+				  text: "Lead provider approval status"
+				},
+				value: {
+				  html: "rejected"
+				}
+			  },
+			{
+				key: {
+				  text: "NPQ course"
+				},
+				value: {
+				  html: "NPQ Leading Teaching (NPQLT)"
+				}
+			  },
+			  
+			  {
+				key: {
+				  text: "School ID"
+				},
+				value: {
+				  html: "<a href='#' class='govuk-link'>dd4a11347-8e4d-89a7-a8ff-f211ea2b7</a>"
+				},
+				actions: {
+				  items: [
+					{
+					  href: "#",
+					  text: "Copy ",
+					  visuallyHiddenText: "address"
+					}
+				  ]
+				}
+			  },
+			  {
+				  key: {
+					text: "School URN"
+				  },
+				  value: {
+					html: "131597"
+				  }
+				},
+				{
+				  key: {
+					text: "School UKPRN"
+				  },
+				  value: {
+					html: "10075238"
+				  }
+				},
+			  
+			  {
+				key: {
+				  text: "Targeted support funding eligibility"
+				},
+				value: {
+				  html: 
+				  "
+				  <strong class='govuk-tag govuk-tag--red'>
+					No	
+				  </strong>
+				  "
+				}
+			  },
+			  
+			  {
+				  key: {
+					text: "Created at"
+				  },
+				  value: {
+					html: "5 Jan 2023, 10:18 AM"
+				  }
+				},
+				{
+				  key: {
+					text: "Updated at"
+				  },
+				  value: {
+					html: "5 Jan 2023, 10:18 AM"
+				  }
+				}
+		]
+	  }) }}
+	
+
+<h3 class="govuk-heading-m">
+	Application 2
+</h3>
+
+	{{ govukSummaryList({
+		
+		rows: [
+		 
+		  {
+			key: {
+			  text: "Application ID"
+			},
+			value: {
+			  html: "<a href='#' class='govuk-link'>1cbf0540-98bf-4061-a333-fbdb702a6cea</a>"
+			}
+		  },
+		 
+			{
+			  key: {
+				text: "Lead provider"
+			  },
+			  value: {
+				html: "	Ambition Institute"
+			  }
+			},
+			{
+				key: {
+				  text: "Lead provider approval status"
+				},
+				value: {
+				  html: "accepted"
+				}
+			  },
+			{
+				key: {
+				  text: "NPQ course"
+				},
+				value: {
+				  html: "NPQ Leading Teaching (NPQLT)"
+				}
+			  },
+			  
+			  {
+				key: {
+				  text: "School ID"
+				},
+				value: {
+				  html: "<a href='#' class='govuk-link'>dd4a11347-8e4d-89a7-a8ff-f211ea2b7</a>"
+				},
+				actions: {
+				  items: [
+					{
+					  href: "#",
+					  text: "Copy ",
+					  visuallyHiddenText: "address"
+					}
+				  ]
+				}
+			  },
+			  {
+				  key: {
+					text: "School URN"
+				  },
+				  value: {
+					html: "131597"
+				  }
+				},
+				{
+				  key: {
+					text: "School UKPRN"
+				  },
+				  value: {
+					html: "10075238"
+				  }
+				},
+			  
+			  {
+				key: {
+				  text: "Targeted support funding eligibility"
+				},
+				value: {
+				  html: 
+				  "
+				  <strong class='govuk-tag govuk-tag--green'>
+					Yes
+				  </strong>
+				  "
+				}
+			  },
+			  
+			  {
+				  key: {
+					text: "Created at"
+				  },
+				  value: {
+					html: "5 Jan 2023, 10:18 AM"
+				  }
+				},
+				{
+				  key: {
+					text: "Updated at"
+				  },
+				  value: {
+					html: "5 Jan 2023, 10:18 AM"
+				  }
+				}
+		]
+	  }) }}
+  
+
+
+
+	
+	
+	
+	
+	</div>
+	</div>
+	
+	
+	
+		</main>
+{% endblock %}

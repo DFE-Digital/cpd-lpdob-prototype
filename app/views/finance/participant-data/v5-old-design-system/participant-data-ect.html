@@ -1,0 +1,503 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+	Participant data – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+	<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+<main class="govuk-main-wrapper govuk-body" id="main-content" role="main">
+      <div class="govuk-grid-row">
+		<div class="govuk-grid-column-two-thirds">
+	<span class="govuk-caption-xl">Participant</span>
+	<h1 class="govuk-heading-xl govuk-!-margin-bottom-9">Frederick Quo
+		
+	</h1>
+
+
+
+
+<ul class="app-subnav__list">
+	<li class="app-subnav__list-item app-subnav__list-item--selected">
+	  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-data-ect">
+		ECT
+	  </a>
+	</li>
+	<li class="app-subnav__list-item ">
+		<a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="participant-data-mentor">
+		  Mentor
+	  <span class="govuk-visually-hidden">Current page</span>
+	  </a>
+	</li>
+	<li class="app-subnav__list-item ">
+		<a class="govuk-link app-subnav__link " aria-current="page" href="participant-data-npq">
+		  NPQ
+	  
+	  </a>
+	</li>
+</ul>
+<br><br>
+
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+<h2 class="govuk-heading-l">
+	Overview
+</h2>
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Type"
+      },
+      value: {
+        text: "	Early career teacher"
+      }
+    },
+    {
+      key: {
+        text: "External ID"
+      },
+      value: {
+        html: "72f96114-8e4d-89a7-a8ff-f211ea2b76f2"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Copy ",
+            visuallyHiddenText: "date of birth"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "User ID / Participant ID"
+      },
+      value: {
+        html: "72f96114-8e4d-89a7-a8ff-f211ea2b76f2"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Copy ",
+            visuallyHiddenText: "address"
+          }
+        ]
+      }
+    }
+  ]
+}) }}
+
+<h2 class="govuk-heading-l">
+	Profile
+</h2>
+{{ govukSummaryList({
+	rows: [
+	  {
+		key: {
+		  text: "Profile ID"
+		},
+		value: {
+		  html: "1cbf0540-98bf-4061-a333-fbdb702a6cea"
+		},
+		actions: {
+		  items: [
+			{
+			  href: "#",
+			  text: "Copy ",
+			  visuallyHiddenText: "date of birth"
+			}
+		  ]
+		}
+	  },
+	  {
+		key: {
+		  text: "Eligible for funding"
+		},
+		value: {
+		  html: "True"
+		}
+	  },
+	  {
+		key: {
+		  text: "Lead provider"
+		},
+		value: {
+		  html: "Ambition Institute"
+		}
+	  },
+	  
+	  {
+		key: {
+		  text: "School ID"
+		},
+		value: {
+		  html: "<a href='#' class='govuk-link'>dd4a11347-8e4d-89a7-a8ff-f211ea2b7</a>"
+		},
+		actions: {
+		  items: [
+			{
+			  href: "#",
+			  text: "Copy ",
+			  visuallyHiddenText: "address"
+			}
+		  ]
+		}
+	  },
+	  {
+		key: {
+		  text: "School URN"
+		},
+		value: {
+		  html: "115018"
+		}
+	  },
+	  {
+		key: {
+		  text: "Delivery partner ID"
+		},
+		value: {
+		  html: "db424-b7b7-454f-a8ff-f2ee6897"
+		}
+	  },
+	  {
+		key: {
+		  text: "Status"
+		},
+		value: {
+		  html: 
+		  "
+		  <strong class='govuk-tag govuk-tag--green'>
+			Active	
+		  </strong>
+		  "
+		}
+	  },
+	  {
+		key: {
+		  text: "Schedule identifier"
+		},
+		value: {
+		  html: "ecf-standard-january"
+		}
+	  },
+	  {
+		key: {
+		  text: "Schedule cohort"
+		},
+		value: {
+		  html: "2021"
+		}
+	  },
+	  {
+		key: {
+		  text: "Created at"
+		},
+		value: {
+		  html: "9 February 2022, 2:24 PM"
+		}
+	  },
+	  {
+		key: {
+		  text: "Updated at"
+		},
+		value: {
+		  html: "13 March 2023, 11:52 AM"
+		}
+	  }
+	]
+  }) }}
+
+
+  <h2 class="govuk-heading-l">
+	Induction records
+</h2>
+{{ govukSummaryList({
+	rows: [
+	  {
+		key: {
+		  text: "Induction ID"
+		},
+		value: {
+		  html: "9a2490cf-21ec-40f7-8f4c-ab6e60b33d1c"
+		},
+		actions: {
+		  items: [
+			{
+			  href: "#",
+			  text: "Copy ",
+			  visuallyHiddenText: "date of birth"
+			}
+		  ]
+		}
+	  },
+	  {
+		key: {
+		  text: "Training programme"
+		},
+		value: {
+		  html: "	Full induction programme"
+		}
+	  },
+	 {
+		key: {
+		  text: "School ID"
+		},
+		value: {
+		  html: "<a href='#' class='govuk-link'>dd4a11347-8e4d-89a7-a8ff-f211ea2b7</a>"
+		},
+		actions: {
+		  items: [
+			{
+			  href: "#",
+			  text: "Copy ",
+			  visuallyHiddenText: "address"
+			}
+		  ]
+		}
+	  },
+	  {
+		key: {
+		  text: "School URN"
+		},
+		value: {
+		  html: "11508"
+		}
+	  },
+	  {
+		key: {
+		  text: "Delivery partner ID"
+		},
+		value: {
+		  html: "db424-b7b7-454f-a8ff-f2ee6897"
+		},
+		actions: {
+			items: [
+			  {
+				href: "#",
+				text: "Copy ",
+				visuallyHiddenText: "address"
+			  }
+			]
+		  }
+	  },
+	  {
+		key: {
+		  text: "Lead provider"
+		},
+		value: {
+		  html: "Ambition Institute"
+		}
+	  },
+	  {
+		key: {
+		  text: "Participant status"
+		},
+		value: {
+		  html: 
+		  "
+		  <strong class='govuk-tag govuk-tag--green'>
+			Active	
+		  </strong>
+		  "
+		}
+	  },
+	  {
+		key: {
+		  text: "Training status"
+		},
+		value: {
+		  html: 
+		  "
+		  <strong class='govuk-tag govuk-tag--green'>
+			Active	
+		  </strong>
+		 "
+		}
+	  },
+	  {
+		key: {
+		  text: "Start date"
+		},
+		value: {
+		  html: "1 September 2021, 12:00 AM"
+		}
+	  },
+	  {
+		key: {
+		  text: "End date"
+		},
+		value: {
+		  html: " "
+		}
+	  },
+	  {
+		key: {
+		  text: "Schedule"
+		},
+		value: {
+		  html: "ecf-standard-january"
+		}
+	  }
+	]
+  }) }}
+
+	{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+	
+	
+
+
+
+	
+	<h2 class="govuk-heading-l">
+		Declarations
+	</h2>
+	
+	{{ govukSummaryList({
+		rows: [
+		  {
+			key: {
+			  text: "Declaration ID"
+			},
+			value: {
+			  html: "157cbf42-d91a-401a-9acc-4eaac8adf480"
+			},
+			actions: {
+			  items: [
+				{
+				  href: "#",
+				  text: "Copy ",
+				  visuallyHiddenText: "date of birth"
+				}
+			  ]
+			}
+		  },
+		  {
+			key: {
+			  text: "Declaration type"
+			},
+			value: {
+			  html: "retained-3"
+			}
+		  },
+		  {
+			key: {
+			  text: "Declaration date"
+			},
+			value: {
+			  html: "19 November 2022, 12:00 AM"
+			}
+		  },
+		  
+		  {
+			key: {
+			  text: "Course identifier"
+			},
+			value: {
+			  html: "	ecf-induction"
+			}
+		  },
+		  {
+			key: {
+			  text: "Evidence held"
+			},
+			value: {
+			  html: ""
+			}
+		  },
+		  {
+			key: {
+			  text: "Lead provider"
+			},
+			value: {
+			  html: "Ambition Institute"
+			}
+		  },
+		  {
+			key: {
+			  text: "State"
+			},
+			value: {
+			  html: "Paid"
+			}
+		  },
+		  
+		  {
+			key: {
+			  text: "Created at"
+			},
+			value: {
+			  html: "30 January 2023, 2:38 PM"
+			}
+		  },
+		  {
+			key: {
+			  text: "Updated at"
+			},
+			value: {
+			  html: "16 February 2023, 4:14 PM"
+			}
+		  }
+		]
+	  }) }}
+
+
+
+
+
+
+
+
+
+	
+	
+	<table class="govuk-table">
+	  <caption class="govuk-table__caption govuk-table__caption--s govuk-heading-s">Declaration state history</caption>
+	  <thead class="govuk-table__head">
+		<tr class="govuk-table__row">
+		<th class="govuk-table__header">State</th>
+		<th class="govuk-table__header">Changed at</th>
+		<th class="govuk-table__header govuk-table__header--numeric">Reason</th>
+	</tr>
+	</thead>
+		<tbody class="govuk-table__body">
+		<tr class="govuk-table__row">
+		<td class="govuk-table__cell">paid</td>
+		<td class="govuk-table__cell">16 February 2023,  4:14 PM</td>
+		<td class="govuk-table__cell govuk-table__cell--numeric">N/A</td>
+	</tr>
+		<tr class="govuk-table__row">
+		<td class="govuk-table__cell">payable</td>
+		<td class="govuk-table__cell">1 February 2023, 12:00 AM</td>
+		<td class="govuk-table__cell govuk-table__cell--numeric">N/A</td>
+	</tr>
+		<tr class="govuk-table__row">
+		<td class="govuk-table__cell">eligible</td>
+		<td class="govuk-table__cell">30 January 2023,  2:38 PM</td>
+		<td class="govuk-table__cell govuk-table__cell--numeric">N/A</td>
+	</tr>
+		<tr class="govuk-table__row">
+		<td class="govuk-table__cell">submitted</td>
+		<td class="govuk-table__cell">30 January 2023,  2:38 PM</td>
+		<td class="govuk-table__cell govuk-table__cell--numeric">N/A</td>
+	</tr>
+	</tbody>
+	</table>
+	
+	
+	
+	
+	</div>
+	</div>
+	
+	
+	
+		</main>
+{% endblock %}

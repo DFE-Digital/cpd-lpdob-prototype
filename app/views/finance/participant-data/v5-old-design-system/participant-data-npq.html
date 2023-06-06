@@ -140,7 +140,7 @@
 		  text: "School ID"
 		},
 		value: {
-		  html: "dd4a11347-8e4d-89a7-a8ff-f211ea2b7"
+		  html: "<a href='#' class='govuk-link'>dd4a11347-8e4d-89a7-a8ff-f211ea2b7</a>"
 		},
 		actions: {
 		  items: [
@@ -322,37 +322,112 @@
 	
 	 
 	<table class="govuk-table">
-	  <caption class="govuk-table__caption govuk-table__caption--m govuk-heading-m">Declaration State History</caption>
+	  <caption class="govuk-table__caption govuk-table__caption--m govuk-heading-m">Declaration state history</caption>
 	  <thead class="govuk-table__head">
 		<tr class="govuk-table__row">
-		<th class="govuk-table__header">State</th>
+		<th class="govuk-table__header govuk-!-width-one-quarter">State</th>
 		<th class="govuk-table__header">Changed at</th>
 		<th class="govuk-table__header govuk-table__header--numeric">Reason</th>
 	</tr>
 	</thead>
 		<tbody class="govuk-table__body">
 		<tr class="govuk-table__row">
-		<td class="govuk-table__cell">paid</td>
+		<td class="govuk-table__cell govuk-!-width-one-quarter">paid</td>
 		<td class="govuk-table__cell">20 May 2023, 11:15 AM</td>
 		<td class="govuk-table__cell govuk-table__cell--numeric">N/A</td>
 	</tr>
 		<tr class="govuk-table__row">
-		<td class="govuk-table__cell">payable</td>
+		<td class="govuk-table__cell govuk-!-width-one-quarter">payable</td>
 		<td class="govuk-table__cell">1 May 2023, 12:03 AM</td>
 		<td class="govuk-table__cell govuk-table__cell--numeric">N/A</td>
 	</tr>
 		<tr class="govuk-table__row">
-		<td class="govuk-table__cell">eligible</td>
+		<td class="govuk-table__cell govuk-!-width-one-quarter">eligible</td>
 		<td class="govuk-table__cell">29 April 2023,  6:51 PM</td>
 		<td class="govuk-table__cell govuk-table__cell--numeric">N/A</td>
 	</tr>
 		<tr class="govuk-table__row">
-		<td class="govuk-table__cell">submitted</td>
+		<td class="govuk-table__cell govuk-!-width-one-quarter">submitted</td>
 		<td class="govuk-table__cell">29 April 2023,  6:51 PM</td>
 		<td class="govuk-table__cell govuk-table__cell--numeric">N/A</td>
 	</tr>
 	</tbody>
 	</table>
+
+	<h3 class="govuk-heading-m">
+		Outcomes
+	</h3>
+	<!--START work previously introduced in NPQ-outcomes-ver4-longdates-->
+	<table class="govuk-table table table-responsive-max-width table-participant">
+		<thead class="govuk-table__head">
+			<tr class="govuk-table__row">
+				<th class="govuk-table__header govuk-body-m govuk-!-width-one-quarter" scope="col">
+					Outcome
+				</th>
+				<th class="govuk-table__header govuk-body-m" scope="col">
+					Date 
+				</th>
+				<th class="govuk-table__header govuk-body-m govuk-table__header--numeric" scope="col">
+					Sent to TRA 
+				</th>
+			</tr>
+		</thead>
+		<tbody class="govuk-table__body">
+			<tr class="gov-table__row">
+				<td class="govuk-table__cell govuk-body-m govuk-!-width-one-quarter">
+					passed
+				</td>
+				<td class="govuk-table__cell govuk-body-m" scope="row">
+					<!-- 29/09/22, 16:14 -->
+					29 September 2022, 4:14 PM
+				</td>
+				<td class="govuk-table__cell govuk-body-m govuk-table__header--numeric" scope="row">
+					<!-- 29/09/22, 16:14 -->
+					29 September 2022, 4:14 PM
+				</td>
+			</tr>
+			<tr class="gov-table__row">
+				<td class="govuk-table__cell govuk-body-m govuk-!-width-one-quarter">
+					voided
+				</td>
+				<td class="govuk-table__cell govuk-body-m" scope="row">
+					<!-- 27/10/22, 12:02 -->
+					27 October 2022, 12:02 AM
+				</td>
+				<td class="govuk-table__cell govuk-body-m govuk-table__header--numeric" scope="row">
+					<!-- 27/10/22, 16:14 -->
+					27 October 2022, 4:14 PM
+				</td>
+			</tr>
+			<tr class="gov-table__row">
+				<td class="govuk-table__cell govuk-body-m govuk-!-width-one-quarter">
+					failed
+				</td>
+				<td class="govuk-table__cell govuk-body-m" scope="row">
+					<!-- 22/11/23, 12:54 -->
+					23 November 2022, 12:34 PM
+				</td>
+				<td class="govuk-table__cell govuk-body-m govuk-table__header--numeric" scope="row">
+					<!-- 22/11/23, 16:14 -->
+					N/A
+				</td>
+			</tr>
+			<tr class="gov-table__row">
+				<td class="govuk-table__cell govuk-body-m govuk-!-width-one-quarter">
+					passed
+				</td>
+				<td class="govuk-table__cell govuk-body-m" scope="row">
+					<!-- 22/12/23, 12:16 -->
+					23 December 2022, 12:34 PM
+				</td>
+				<td class="govuk-table__cell govuk-body-m govuk-table__header--numeric" scope="row">
+					<!-- 23/12/23, 16:16 -->
+					23 December 2022, 4:14 PM
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<!--END work previously introduced in NPQ-outcomes-ver4-longdates-->
 
 	<h2 class="govuk-heading-l">
 		NPQ applications
@@ -398,7 +473,23 @@
 				}
 			  },
 			  
-			  
+			  {
+				key: {
+				  text: "School ID"
+				},
+				value: {
+				  html: "<a href='#' class='govuk-link'>dd4a11347-8e4d-89a7-a8ff-f211ea2b7</a>"
+				},
+				actions: {
+				  items: [
+					{
+					  href: "#",
+					  text: "Copy ",
+					  visuallyHiddenText: "address"
+					}
+				  ]
+				}
+			  },
 			  {
 				  key: {
 					text: "School URN"
@@ -492,7 +583,23 @@
 				}
 			  },
 			  
-			  
+			  {
+				key: {
+				  text: "School ID"
+				},
+				value: {
+				  html: "<a href='#' class='govuk-link'>dd4a11347-8e4d-89a7-a8ff-f211ea2b7</a>"
+				},
+				actions: {
+				  items: [
+					{
+					  href: "#",
+					  text: "Copy ",
+					  visuallyHiddenText: "address"
+					}
+				  ]
+				}
+			  },
 			  {
 				  key: {
 					text: "School URN"
