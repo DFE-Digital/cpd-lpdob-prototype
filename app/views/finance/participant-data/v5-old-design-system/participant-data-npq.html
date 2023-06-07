@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/main-nav.html" %}
 
 {% block pageTitle %}
 	Participant data – {{ serviceName }} – GOV.UK Prototype Kit
@@ -12,7 +12,7 @@
 {% block content %}
 <main class="govuk-main-wrapper govuk-body" id="main-content" role="main">
       <div class="govuk-grid-row">
-		<div class="govuk-grid-column-two-thirds">
+		<div class="govuk-grid-column-full">
 	<span class="govuk-caption-xl">Participant</span>
 
 <h1 class="govuk-heading-xl govuk-!-margin-bottom-9">Frederick Quo</h1>
@@ -250,6 +250,15 @@
 			},
 			value: {
 			  html: "2c579682-5545-4f69-8299-f4fda60465"
+			},
+			actions: {
+			  items: [
+				{
+				  href: "#",
+				  text: "Copy",
+				  visuallyHiddenText: "address"
+				}
+			  ]
 			}
 		  },
 		  {
@@ -364,10 +373,13 @@
 				<th class="govuk-table__header govuk-body-m govuk-!-width-one-quarter" scope="col">
 					Outcome
 				</th>
-				<th class="govuk-table__header govuk-body-m" scope="col">
-					Date 
+				<th class="govuk-table__header govuk-body-m govuk-!-width-one-quarter" scope="col">
+					Completion date
 				</th>
-				<th class="govuk-table__header govuk-body-m govuk-table__header--numeric" scope="col">
+				<th class="govuk-table__header govuk-body-m" scope="col">
+					Changed at 
+				</th>
+				<th class="govuk-table__header govuk-body-m " scope="col">
 					Sent to TRA 
 				</th>
 			</tr>
@@ -378,26 +390,28 @@
 					passed
 				</td>
 				<td class="govuk-table__cell govuk-body-m" scope="row">
-					<!-- 29/09/22, 16:14 -->
-					29 September 2022, 4:14 PM
+					<!-- 29/09/22 -->
+					29 April 2023
 				</td>
-				<td class="govuk-table__cell govuk-body-m govuk-table__header--numeric" scope="row">
+				<td class="govuk-table__cell govuk-body-m " scope="row">
 					<!-- 29/09/22, 16:14 -->
-					29 September 2022, 4:14 PM
+					29 April 2023, 4:14 PM
 				</td>
+				<td class="govuk-table__cell govuk-body-m" scope="row"></td>
 			</tr>
 			<tr class="gov-table__row">
 				<td class="govuk-table__cell govuk-body-m govuk-!-width-one-quarter">
 					voided
 				</td>
 				<td class="govuk-table__cell govuk-body-m" scope="row">
-					<!-- 27/10/22, 12:02 -->
-					27 October 2022, 12:02 AM
+					<!-- 27/10/22 -->
+					27 May 2023
 				</td>
-				<td class="govuk-table__cell govuk-body-m govuk-table__header--numeric" scope="row">
+				<td class="govuk-table__cell govuk-body-m " scope="row">
 					<!-- 27/10/22, 16:14 -->
-					27 October 2022, 4:14 PM
+					27 May 2023, 4:14 PM
 				</td>
+				<td class="govuk-table__cell govuk-body-m" scope="row"></td>
 			</tr>
 			<tr class="gov-table__row">
 				<td class="govuk-table__cell govuk-body-m govuk-!-width-one-quarter">
@@ -405,12 +419,14 @@
 				</td>
 				<td class="govuk-table__cell govuk-body-m" scope="row">
 					<!-- 22/11/23, 12:54 -->
-					23 November 2022, 12:34 PM
+					23 June 2023
 				</td>
-				<td class="govuk-table__cell govuk-body-m govuk-table__header--numeric" scope="row">
+				
+				<td class="govuk-table__cell govuk-body-m " scope="row">
 					<!-- 22/11/23, 16:14 -->
-					N/A
+					23 June 2023, 
 				</td>
+				<td class="govuk-table__cell govuk-body-m" scope="row"></td>
 			</tr>
 			<tr class="gov-table__row">
 				<td class="govuk-table__cell govuk-body-m govuk-!-width-one-quarter">
@@ -418,12 +434,13 @@
 				</td>
 				<td class="govuk-table__cell govuk-body-m" scope="row">
 					<!-- 22/12/23, 12:16 -->
-					23 December 2022, 12:34 PM
+					23 December 2022
 				</td>
-				<td class="govuk-table__cell govuk-body-m govuk-table__header--numeric" scope="row">
+				<td class="govuk-table__cell govuk-body-m " scope="row">
 					<!-- 23/12/23, 16:16 -->
 					23 December 2022, 4:14 PM
 				</td>
+				<td class="govuk-table__cell govuk-body-m" scope="row"></td>
 			</tr>
 		</tbody>
 	</table>
@@ -444,7 +461,16 @@
 			  text: "Application ID"
 			},
 			value: {
-			  html: "<a href='#' class='govuk-link'>1cbf0540-98bf-4061-a333-fbdb73eed013f</a>"
+			  html: "1cbf0540-98bf-4061-a333-fbdb73eed013f"
+			},
+			actions: {
+			  items: [
+				{
+				  href: "#",
+				  text: "Copy ",
+				  visuallyHiddenText: "address"
+				}
+			  ]
 			}
 		  },
 		 
@@ -461,7 +487,12 @@
 				  text: "Lead provider approval status"
 				},
 				value: {
-				  html: "rejected"
+				  html: 
+				  "
+				  <strong class='govuk-tag govuk-tag--red'>
+					Rejected
+				  </strong> 
+				  "
 				}
 			  },
 			{
@@ -554,7 +585,16 @@
 			  text: "Application ID"
 			},
 			value: {
-			  html: "<a href='#' class='govuk-link'>1cbf0540-98bf-4061-a333-fbdb702a6cea</a>"
+			  html: "1cbf0540-98bf-4061-a333-fbdb702a6cea"
+			},
+			actions: {
+			  items: [
+				{
+				  href: "#",
+				  text: "Copy ",
+				  visuallyHiddenText: "address"
+				}
+			  ]
 			}
 		  },
 		 
@@ -571,7 +611,12 @@
 				  text: "Lead provider approval status"
 				},
 				value: {
-				  html: "accepted"
+				  html: 
+				  "
+				  <strong class='govuk-tag govuk-tag--green'>
+					Accepted
+				  </strong> 
+				  "
 				}
 			  },
 			{
