@@ -1,0 +1,12 @@
+.search-box__form {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .search-box__input {
+    flex-grow: 1;
+  }
+
+  search-box__input:nth-of-type(n+2) {
+    margin-left: 15px;
+  }
