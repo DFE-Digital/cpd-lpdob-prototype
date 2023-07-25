@@ -8087,10 +8087,10 @@ code a:hover {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-.finance-panel .output-payments tbody tr:nth-of-type(2n - 1) th,
+/* .finance-panel .output-payments tbody tr:nth-of-type(2n - 1) th,
 .finance-panel .output-payments tbody tr:nth-of-type(2n - 1) td {
   border-bottom: 0;
-}
+} */
 
 .finance-panel__summary__downloads {
   display: grid;

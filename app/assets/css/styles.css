@@ -10,3 +10,11 @@
   search-box__input:nth-of-type(n+2) {
     margin-left: 15px;
   }
+
+  .extended_rule {
+  border-bottom: 0;
+}
+
+.extended_line {
+    border-bottom:2pt solid #f8f8f8;
+}
