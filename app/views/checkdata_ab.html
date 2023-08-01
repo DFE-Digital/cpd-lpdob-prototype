@@ -25,6 +25,7 @@
 <span class="govuk-caption-xl">Delivery partner</span>
 <h1 class="govuk-heading-xl">Delivery partner Business Name</h1>
 
+
 <p class="govuk-body govuk-!-text-align-right">
 <a class="govuk-link" href="/delivery-partners/848eaee1-221e-444c-ad5e-52096a01d76f/participants?format=csv">Download (csv)</a>
 </p>
@@ -35,30 +36,49 @@
     <div class="govuk-form-group"><label for="query-field" class="govuk-label govuk-label--s">Search</label><div class="govuk-hint" id="query-hint">For example, school, participant name or teacher reference number (TRN)</div><input id="query-field" class="govuk-input" aria-describedby="query-hint" type="text" name="query" data-ddg-inputtype="unknown"></div>
   </div>
 
-    <div class="search-box__input">
-      <div class="govuk-form-group"><label for="role-field" class="govuk-label">Filter by role</label><select id="role-field" class="govuk-select" name="role" data-ddg-inputtype="unknown"><option value=""></option>
-<option value="ect">Early career teacher</option>
-<option value="mentor">Mentor</option></select></div>
-    </div>
-    <div class="search-box__input">
-      <div class="govuk-form-group"><label for="academic-year-field" class="govuk-label">Filter by academic year</label><select id="academic-year-field" class="govuk-select" name="academic_year" data-ddg-inputtype="unknown"><option value=""></option>
-<option value="2020">2020</option>
-<option value="2021">2021</option>
-<option value="2022">2022</option>
-<option value="2023">2023</option></select></div>
-    </div>
-    <div class="search-box__input">
-      <div class="govuk-form-group"><label for="status-field" class="govuk-label">Filter by status</label><select id="status-field" class="govuk-select" name="status" data-ddg-inputtype="unknown"><option value=""></option>
-<option value="contacted_for_information">Contacted for information</option>
-<option value="dfe_checking_eligibility">DfE checking eligibility</option>
-<option value="not_eligible_for_funded_training">Not eligible for funded training</option>
-<option value="checking_qts">Checking QTS</option>
-<option value="training_or_eligible_for_training">Training or eligible for training</option>
-<option value="no_longer_being_trained">No longer being trained</option></select></div>
-    </div>
-
   <button type="submit" formnovalidate="formnovalidate" class="govuk-button search-box__button" data-module="govuk-button" data-prevent-double-click="true" data-test="search-button">Search</button>
 </form></div>
+
+<!-- Filter -->
+  <form class="search-box__form" action="/delivery-partners/848eaee1-221e-444c-ad5e-52096a01d76f/participants" accept-charset="UTF-8" method="get">
+
+  
+      <div class="search-box__input">
+        <div class="govuk-form-group"><label for="role-field" class="govuk-label">Filter by school</label><select id="role-field" class="govuk-select" name="role" data-ddg-inputtype="unknown"><option value=""></option>
+  <option value="ect">Early career teacher</option>
+  <option value="mentor">Mentor</option></select></div>
+      </div>
+      <div class="search-box__input">
+        <div class="govuk-form-group"><label for="academic-year-field" class="govuk-label">Filter by academic year</label><select id="academic-year-field" class="govuk-select" name="academic_year" data-ddg-inputtype="unknown"><option value=""></option>
+  <option value="2020">2020</option>
+  <option value="2021">2021</option>
+  <option value="2022">2022</option>
+  <option value="2023">2023</option></select></div>
+      </div>
+  
+      <div class="search-box__input">
+        <div class="govuk-form-group"><label for="status-field" class="govuk-label">Filter by status</label><select id="status-field" class="govuk-select" name="status" data-ddg-inputtype="unknown"><option value=""></option>
+  <option value="contacted_for_information">Contacted for information</option>
+  <option value="dfe_checking_eligibility">DfE checking eligibility</option>
+  <option value="not_eligible_for_funded_training">Not eligible for funded training</option>
+  <option value="checking_qts">Checking QTS</option>
+  <option value="training_or_eligible_for_training">Training or eligible for training</option>
+  <option value="no_longer_being_trained">No longer being trained</option></select></div>
+      </div>
+  
+      <div class="search-box__input">
+        <div class="govuk-form-group"><label for="status-field" class="govuk-label">Filter by mentor assigned</label><select id="status-field" class="govuk-select" name="mentor" data-ddg-inputtype="unknown"><option value=""></option>
+  <option value="contacted_for_information">Contacted for information</option>
+  <option value="dfe_checking_eligibility">DfE checking eligibility</option>
+  <option value="not_eligible_for_funded_training">Not eligible for funded training</option>
+  <option value="checking_qts">Checking QTS</option>
+  <option value="training_or_eligible_for_training">Training or eligible for training</option>
+  <option value="no_longer_being_trained">No longer being trained</option></select></div>
+      </div>
+
+  </form>
+  <br><br>
+<!--  -->
 
 
 <table class="govuk-table">
