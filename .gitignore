@@ -1,3 +1,4 @@
 node_modules
 .port.tmp
 public/stylesheets/application.scss
+app/.DS_Store
