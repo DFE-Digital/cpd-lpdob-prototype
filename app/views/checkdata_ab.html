@@ -36,7 +36,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
         accept-charset="UTF-8" method="get">
         <div class="search-box__input">
           <div class="govuk-form-group"><label for="query-field" class="govuk-label govuk-label--s">Search</label>
-            <div class="govuk-hint" id="query-hint">For example, school, participant name or teacher reference number
+            <div class="govuk-hint" id="query-hint">For example, school name or URN, participant name or teacher reference number
               (TRN)
             </div><input id="query-field" class="govuk-input" aria-describedby="query-hint" type="text"
               name="query" data-ddg-inputtype="unknown">
@@ -68,34 +68,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
         </div>
 
-        <div class="search-box__input">
-          <div class="govuk-form-group"><label for="role-field" class="govuk-label">Filter by mentor assigned</label><select
-              id="role-field" class="govuk-select" name="role" data-ddg-inputtype="unknown">
-              <option value=""></option>
-              <option value="ect">Yes</option>
-              <option value="mentor">No</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="search-box__input">
-          <div class="govuk-form-group"><label for="role-field" class="govuk-label">Filter by school</label><select
-              id="role-field" class="govuk-select" name="role" data-ddg-inputtype="unknown">
-              <option value=""></option>
-              <option value="school_1">School 1</option>
-              <option value="school_2">School 2</option>
-              <option value="school_3">School 3</option>
-              <option value="school_4">School 4</option>
-              <option value="school_5">School 5</option>
-              <option value="school_6">School 6</option>
-              <option value="school_7">School 7</option>
-              <option value="school_8">School 8</option>
-              <option value="school_9">School 9</option>
-              <option value="school_10">School 10</option>
-            </select>
-          </div>
-        </div>
-
         <button type="submit" formnovalidate="formnovalidate" class="govuk-button search-box__button"
           data-module="govuk-button" data-prevent-double-click="true" data-test="search-button">Search
         </button>
@@ -109,10 +81,9 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           <th scope="col" class="govuk-table__header">Full name</th>
           <th scope="col" class="govuk-table__header">TRN</th>
           <th scope="col" class="govuk-table__header">School URN</th>
-          <th scope="col" class="govuk-table__header">Academic year</th>
           <th scope="col" class="govuk-table__header">Status (TBC)</th>
-          <th scope="col" class="govuk-table__header">Programme choice (CIP/FIP)</th>
-          <th scope="col" class="govuk-table__header">SIT</th>
+          <th scope="col" class="govuk-table__header">Induction type</th>
+          <th scope="col" class="govuk-table__header">Induction tutor</th>
         </tr>
       </thead>
 
@@ -126,10 +97,7 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <td class="govuk-table__cell">
             000000
-          </td>
-          <td class="govuk-table__cell">
-            2023
-          </td>
+        </td>
           <td class="govuk-table__cell">
             [Status]
           </td>
@@ -149,9 +117,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <td class="govuk-table__cell">
             000000
-          </td>
-          <td class="govuk-table__cell">
-            2023
           </td>
           <td class="govuk-table__cell">
             [Status]
@@ -174,9 +139,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
             000000
           </td>
           <td class="govuk-table__cell">
-            2023
-          </td>
-          <td class="govuk-table__cell">
             [Status]
           </td>
           <td class="govuk-table__cell">
@@ -195,9 +157,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <td class="govuk-table__cell">
             000000
-          </td>
-          <td class="govuk-table__cell">
-            2023
           </td>
           <td class="govuk-table__cell">
             [Status]
@@ -220,9 +179,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
             000000
           </td>
           <td class="govuk-table__cell">
-            2023
-          </td>
-          <td class="govuk-table__cell">
             [Status]
           </td>
           <td class="govuk-table__cell">
@@ -241,9 +197,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <td class="govuk-table__cell">
             000000
-          </td>
-          <td class="govuk-table__cell">
-            2023
           </td>
           <td class="govuk-table__cell">
             [Status]
@@ -266,9 +219,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
             000000
           </td>
           <td class="govuk-table__cell">
-            2023
-          </td>
-          <td class="govuk-table__cell">
             [Status]
           </td>
           <td class="govuk-table__cell">
@@ -287,9 +237,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <td class="govuk-table__cell">
             000000
-          </td>
-          <td class="govuk-table__cell">
-            2023
           </td>
           <td class="govuk-table__cell">
             [Status]
@@ -312,9 +259,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
             000000
           </td>
           <td class="govuk-table__cell">
-            2023
-          </td>
-          <td class="govuk-table__cell">
             [Status]
           </td>
           <td class="govuk-table__cell">
@@ -333,9 +277,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <td class="govuk-table__cell">
             000000
-          </td>
-          <td class="govuk-table__cell">
-            2023
           </td>
           <td class="govuk-table__cell">
             [Status]
@@ -358,9 +299,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
             000000
           </td>
           <td class="govuk-table__cell">
-            2023
-          </td>
-          <td class="govuk-table__cell">
             [Status]
           </td>
           <td class="govuk-table__cell">
@@ -379,9 +317,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <td class="govuk-table__cell">
             000000
-          </td>
-          <td class="govuk-table__cell">
-            2023
           </td>
           <td class="govuk-table__cell">
             [Status]
@@ -404,9 +339,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
             000000
           </td>
           <td class="govuk-table__cell">
-            2023
-          </td>
-          <td class="govuk-table__cell">
             [Status]
           </td>
           <td class="govuk-table__cell">
@@ -425,9 +357,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <td class="govuk-table__cell">
             000000
-          </td>
-          <td class="govuk-table__cell">
-            2023
           </td>
           <td class="govuk-table__cell">
             [Status]
@@ -450,9 +379,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
             000000
           </td>
           <td class="govuk-table__cell">
-            2023
-          </td>
-          <td class="govuk-table__cell">
             [Status]
           </td>
           <td class="govuk-table__cell">
@@ -471,9 +397,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <td class="govuk-table__cell">
             000000
-          </td>
-          <td class="govuk-table__cell">
-            2023
           </td>
           <td class="govuk-table__cell">
             [Status]
@@ -496,9 +419,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
             000000
           </td>
           <td class="govuk-table__cell">
-            2023
-          </td>
-          <td class="govuk-table__cell">
             [Status]
           </td>
           <td class="govuk-table__cell">
@@ -517,9 +437,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <td class="govuk-table__cell">
             000000
-          </td>
-          <td class="govuk-table__cell">
-            2023
           </td>
           <td class="govuk-table__cell">
             [Status]
@@ -542,9 +459,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
             000000
           </td>
           <td class="govuk-table__cell">
-            2023
-          </td>
-          <td class="govuk-table__cell">
             [Status]
           </td>
           <td class="govuk-table__cell">
@@ -563,9 +477,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <td class="govuk-table__cell">
             000000
-          </td>
-          <td class="govuk-table__cell">
-            2023
           </td>
           <td class="govuk-table__cell">
             [Status]
@@ -588,9 +499,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
             000000
           </td>
           <td class="govuk-table__cell">
-            2023
-          </td>
-          <td class="govuk-table__cell">
             [Status]
           </td>
           <td class="govuk-table__cell">
@@ -609,9 +517,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <td class="govuk-table__cell">
             000000
-          </td>
-          <td class="govuk-table__cell">
-            2023
           </td>
           <td class="govuk-table__cell">
             [Status]
@@ -634,9 +539,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
             000000
           </td>
           <td class="govuk-table__cell">
-            2023
-          </td>
-          <td class="govuk-table__cell">
             [Status]
           </td>
           <td class="govuk-table__cell">
@@ -655,9 +557,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <td class="govuk-table__cell">
             000000
-          </td>
-          <td class="govuk-table__cell">
-            2023
           </td>
           <td class="govuk-table__cell">
             [Status]
@@ -680,9 +579,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
             000000
           </td>
           <td class="govuk-table__cell">
-            2023
-          </td>
-          <td class="govuk-table__cell">
             [Status]
           </td>
           <td class="govuk-table__cell">
@@ -701,9 +597,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <td class="govuk-table__cell">
             000000
-          </td>
-          <td class="govuk-table__cell">
-            2023
           </td>
           <td class="govuk-table__cell">
             [Status]
@@ -726,9 +619,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
             000000
           </td>
           <td class="govuk-table__cell">
-            2023
-          </td>
-          <td class="govuk-table__cell">
             [Status]
           </td>
           <td class="govuk-table__cell">
@@ -747,9 +637,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <td class="govuk-table__cell">
             000000
-          </td>
-          <td class="govuk-table__cell">
-            2023
           </td>
           <td class="govuk-table__cell">
             [Status]
@@ -772,9 +659,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
             000000
           </td>
           <td class="govuk-table__cell">
-            2023
-          </td>
-          <td class="govuk-table__cell">
             [Status]
           </td>
           <td class="govuk-table__cell">
@@ -793,9 +677,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <td class="govuk-table__cell">
             000000
-          </td>
-          <td class="govuk-table__cell">
-            2023
           </td>
           <td class="govuk-table__cell">
             [Status]
@@ -818,9 +699,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
             000000
           </td>
           <td class="govuk-table__cell">
-            2023
-          </td>
-          <td class="govuk-table__cell">
             [Status]
           </td>
           <td class="govuk-table__cell">
@@ -839,9 +717,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <td class="govuk-table__cell">
             000000
-          </td>
-          <td class="govuk-table__cell">
-            2023
           </td>
           <td class="govuk-table__cell">
             [Status]
@@ -864,9 +739,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
             000000
           </td>
           <td class="govuk-table__cell">
-            2023
-          </td>
-          <td class="govuk-table__cell">
             [Status]
           </td>
           <td class="govuk-table__cell">
@@ -885,9 +757,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <td class="govuk-table__cell">
             000000
-          </td>
-          <td class="govuk-table__cell">
-            2023
           </td>
           <td class="govuk-table__cell">
             [Status]
@@ -910,9 +779,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
             000000
           </td>
           <td class="govuk-table__cell">
-            2023
-          </td>
-          <td class="govuk-table__cell">
             [Status]
           </td>
           <td class="govuk-table__cell">
@@ -931,9 +797,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <td class="govuk-table__cell">
             000000
-          </td>
-          <td class="govuk-table__cell">
-            2023
           </td>
           <td class="govuk-table__cell">
             [Status]
@@ -956,9 +819,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
             000000
           </td>
           <td class="govuk-table__cell">
-            2023
-          </td>
-          <td class="govuk-table__cell">
             [Status]
           </td>
           <td class="govuk-table__cell">
@@ -977,9 +837,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <td class="govuk-table__cell">
             000000
-          </td>
-          <td class="govuk-table__cell">
-            2023
           </td>
           <td class="govuk-table__cell">
             [Status]
@@ -1002,9 +859,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
             000000
           </td>
           <td class="govuk-table__cell">
-            2023
-          </td>
-          <td class="govuk-table__cell">
             [Status]
           </td>
           <td class="govuk-table__cell">
@@ -1023,9 +877,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <td class="govuk-table__cell">
             000000
-          </td>
-          <td class="govuk-table__cell">
-            2023
           </td>
           <td class="govuk-table__cell">
             [Status]
@@ -1048,9 +899,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
             000000
           </td>
           <td class="govuk-table__cell">
-            2023
-          </td>
-          <td class="govuk-table__cell">
             [Status]
           </td>
           <td class="govuk-table__cell">
@@ -1069,9 +917,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <td class="govuk-table__cell">
             000000
-          </td>
-          <td class="govuk-table__cell">
-            2023
           </td>
           <td class="govuk-table__cell">
             [Status]
@@ -1094,9 +939,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
             000000
           </td>
           <td class="govuk-table__cell">
-            2023
-          </td>
-          <td class="govuk-table__cell">
             [Status]
           </td>
           <td class="govuk-table__cell">
@@ -1115,9 +957,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <td class="govuk-table__cell">
             000000
-          </td>
-          <td class="govuk-table__cell">
-            2023
           </td>
           <td class="govuk-table__cell">
             [Status]
@@ -1140,9 +979,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
             000000
           </td>
           <td class="govuk-table__cell">
-            2023
-          </td>
-          <td class="govuk-table__cell">
             [Status]
           </td>
           <td class="govuk-table__cell">
@@ -1161,9 +997,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <td class="govuk-table__cell">
             000000
-          </td>
-          <td class="govuk-table__cell">
-            2023
           </td>
           <td class="govuk-table__cell">
             [Status]
@@ -1186,9 +1019,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
             000000
           </td>
           <td class="govuk-table__cell">
-            2023
-          </td>
-          <td class="govuk-table__cell">
             [Status]
           </td>
           <td class="govuk-table__cell">
@@ -1207,9 +1037,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <td class="govuk-table__cell">
             000000
-          </td>
-          <td class="govuk-table__cell">
-            2023
           </td>
           <td class="govuk-table__cell">
             [Status]
@@ -1232,9 +1059,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
             000000
           </td>
           <td class="govuk-table__cell">
-            2023
-          </td>
-          <td class="govuk-table__cell">
             [Status]
           </td>
           <td class="govuk-table__cell">
@@ -1253,9 +1077,6 @@ GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
           </td>
           <td class="govuk-table__cell">
             000000
-          </td>
-          <td class="govuk-table__cell">
-            2023
           </td>
           <td class="govuk-table__cell">
             [Staus]
