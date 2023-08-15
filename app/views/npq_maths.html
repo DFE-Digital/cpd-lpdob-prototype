@@ -1,0 +1,375 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container govuk-width-container__wide">
+  <a class="govuk-back-link" href="/finance/payment-breakdowns/choose-provider-npq">Back</a>
+
+  <div class="govuk-breadcrumbs">
+<ol class="govuk-breadcrumbs__list">
+</ol>
+</div>
+
+  <main class="govuk-main-wrapper govuk-body" id="main-content" role="main">
+    
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+  <h1 class="govuk-heading-xl">National professional qualifications (NPQs)</h1>
+  <span class="govuk-caption-l">Provider name</span>
+  <h2 class="govuk-heading-l">Month 0000</h2>
+
+  <form class="statement-selector" action="/finance/payment-breakdowns/choose-npq-statement" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="uiJOjXyKG7AbV_s6AMjH0XrISiPlv0JXX5aZTOphuxTngQSuE0VYWlutzgVMHRDCQAbwCam9yXNZXt-0zC13AQ" autocomplete="off">
+<div class="govuk-form-group govuk-!-width-one-third"><label for="npq-lead-provider-field" class="govuk-label">View a different provider</label><select id="npq-lead-provider-field" class="govuk-select" name="npq_lead_provider" data-ddg-inputtype="unknown"><option selected="selected" value="9e35e998-c63b-4136-89c4-e9e18ddde0ea">Provider name</option>
+<option value="57ba9e86-559f-4ff4-a6d2-4610c7259b67">Best Practice Network</option>
+<option value="79cb41ca-cb6d-405c-b52c-b6f7c752388d">Church of England</option>
+<option value="21e61f53-9b34-4384-a8f5-d8224dbf946d">Education Development Trust</option>
+<option value="230e67c0-071a-4a48-9673-9d043d456281">Leadership Learning South East</option>
+<option value="3ec607f2-7a3a-421f-9f1a-9aca8a634aeb">National Institute of Teaching</option>
+<option value="bc5e4e37-1d64-4149-a06b-ad10d3c55fd0">School-Led Network</option>
+<option value="30fd937e-b93c-4f81-8fff-3c27544193f1">Teacher Development Trust</option>
+<option value="a02ae582-f939-462f-90bc-cebf20fa8473">Teach First</option>
+<option value="ef687b3d-c1c0-4566-a295-16d6fa5d0fa7">UCL Institute of Education</option></select></div>
+
+<div class="govuk-form-group"><label for="cohort-year-field" class="govuk-label">View a different cohort</label><select id="cohort-year-field" class="govuk-select" name="cohort_year" data-ddg-inputtype="unknown"><option selected="selected" value="2022">2022</option>
+<option value="2021">2021</option>
+<option value="2023">2023</option></select></div>
+
+<div class="govuk-form-group govuk-!-width-one-third"><label for="statement-field" class="govuk-label">View a different statement</label><select id="statement-field" class="govuk-select" name="statement" data-ddg-inputtype="identities.addressProvince"><option value="january-2022">January 2022</option>
+<option value="february-2022">February 2022</option>
+<option value="march-2022">March 2022</option>
+<option value="april-2022">April 2022</option>
+<option value="may-2022">May 2022</option>
+<option value="june-2022">June 2022</option>
+<option value="july-2022">July 2022</option>
+<option value="august-2022">August 2022</option>
+<option value="september-2022">September 2022</option>
+<option value="october-2022">October 2022</option>
+<option value="november-2022">November 2022</option>
+<option value="december-2022">December 2022</option>
+<option value="january-2023">January 2023</option>
+<option value="february-2023">February 2023</option>
+<option value="march-2023">March 2023</option>
+<option value="april-2023">April 2023</option>
+<option value="may-2023">May 2023</option>
+<option value="june-2023">June 2023</option>
+<option value="july-2023">July 2023</option>
+<option selected="selected" value="august-2023">August 2023</option>
+<option value="september-2023">September 2023</option>
+<option value="october-2023">October 2023</option>
+<option value="november-2023">November 2023</option>
+<option value="december-2023">December 2023</option>
+<option value="january-2024">January 2024</option>
+<option value="february-2024">February 2024</option>
+<option value="february-2025">February 2025</option>
+<option value="march-2024">March 2024</option>
+<option value="april-2024">April 2024</option>
+<option value="may-2024">May 2024</option>
+<option value="june-2024">June 2024</option>
+<option value="july-2024">July 2024</option>
+<option value="august-2024">August 2024</option>
+<option value="september-2024">September 2024</option>
+<option value="october-2024">October 2024</option>
+<option value="november-2024">November 2024</option>
+<option value="december-2024">December 2024</option>
+<option value="january-2026">January 2026</option>
+<option value="january-2025">January 2025</option>
+<option value="february-2026">February 2026</option>
+<option value="march-2025">March 2025</option>
+<option value="march-2026">March 2026</option>
+<option value="april-2026">April 2026</option>
+<option value="april-2025">April 2025</option>
+<option value="may-2025">May 2025</option>
+<option value="june-2025">June 2025</option>
+<option value="july-2025">July 2025</option>
+<option value="august-2025">August 2025</option>
+<option value="september-2025">September 2025</option>
+<option value="october-2025">October 2025</option>
+<option value="november-2025">November 2025</option>
+<option value="december-2025">December 2025</option></select></div>
+
+<button type="submit" formnovalidate="formnovalidate" class="govuk-button govuk-button--secondary" data-module="govuk-button" data-prevent-double-click="true">View</button>
+</form>
+  <div class="app-application__panel__summary">
+    <div class="govuk-!-margin-right-4">
+      <p class="govuk-body-s govuk-!-margin-bottom-2">
+        Net VAT
+        <span>£0.00</span>
+      </p>
+      <h4 class="govuk-heading-m govuk-!-margin-bottom-2">Total £00,000.00</h4>
+
+      <p class="govuk-body-s govuk-!-margin-bottom-2">
+        Output payment
+        <span>£0.00</span>
+      </p>
+
+        <p class="govuk-body-s govuk-!-margin-bottom-2">
+          Targeted delivery funding
+          <span>£0.00</span>
+        </p>
+
+      <p class="govuk-body-s govuk-!-margin-bottom-2">
+        Clawbacks
+        <span>£0.00</span>
+      </p>
+
+      <!-- <p class="govuk-body-s govuk-!-margin-bottom-2">
+        Service fee
+        <span>£21,850.58</span>
+      </p> -->
+
+      <!-- <p class="govuk-body-s govuk-!-margin-bottom-2">
+        VAT
+        <span>£4,370.12</span>
+      </p> -->
+    </div>
+
+    <ul class="first govuk-list govuk-!-margin-bottom-0">
+      <li>
+        <strong class="float govuk-body-s govuk-!-margin-bottom-0">Output payment cut off date</strong>
+        <div class="number-group">
+          <div class="number-container govuk-!-padding-right-4">
+            <div class="float tooltip">
+              <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0">
+                <span>00 Month 0000</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <ul class="second govuk-list govuk-!-margin-bottom-0">
+      <li>
+        <strong class="float govuk-body-s govuk-!-margin-bottom-0">Total starts</strong>
+        <div class="number-group">
+          <div class="number-container govuk-!-padding-right-4">
+            <div class="float tooltip">
+              <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0">
+                <span>0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <ul class="booster govuk-list govuk-!-margin-bottom-0">
+      <li>
+        <strong class="govuk-body-s float govuk-!-margin-bottom-0">Total retained</strong>
+        <div class="number-group">
+          <div class="number-container govuk-!-padding-right-4">
+            <div class="float tooltip">
+              <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0">
+                <span>0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <ul class="fourth govuk-list govuk-!-margin-bottom-0">
+        <li class="empty">
+          <strong class="govuk-body-s float govuk-!-margin-bottom-0">Total completed</strong>
+          <div class="number-group">
+            <div class="number-container govuk-!-padding-right-4">
+              <div class="float tooltip">
+                <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0">
+                  <span>0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+    </ul>
+
+    <ul class="fifth govuk-list govuk-!-margin-bottom-0">
+      <li class="empty">
+        <strong class="govuk-body-s float govuk-!-margin-bottom-0">Total voids</strong>
+        <div class="number-group">
+          <div class="number-container govuk-!-padding-right-4">
+            <div class="float tooltip">
+              <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0">
+                <span>0</span>
+                <br>
+                <p class="govuk-body-s"><a class="govuk-link" href="/finance/npq/payment-overviews/9e35e998-c63b-4136-89c4-e9e18ddde0ea/statements/935bb96b-0ba0-4703-b26a-6c432fead99c/voided">View</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="finance-panel__summary__downloads">
+    <div class="duvet">
+      <p class="govuk-body-s">
+        <a class="govuk-link" href="/finance/npq/statements/935bb96b-0ba0-4703-b26a-6c432fead99c/assurance-report.csv">Download declarations (CSV)</a>
+      </p>
+    </div> <!-- /.duvet -->
+  </div>
+</div>
+</div>
+<br>
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+  <div class="app-application__panel">
+    <div class="moj-filter-layout__content">
+        <section class="app-application__card">
+<h2 class="govuk-heading-m">Leading primary maths</h2>
+
+<header class="app-application-card__header">
+    <span class="govuk-body-s">
+      Started
+      <br>
+      0
+    </span>
+    <span class="govuk-body-s">
+      Retained 1
+      <br>
+      0
+    </span>
+    <span class="govuk-body-s">
+      Retained 2
+      <br>
+      0
+    </span>
+    <span class="govuk-body-s">
+      Completed
+      <br>
+      0
+    </span>
+
+  <span class="govuk-body-s">Total declarations<br>0</span>
+  <span class="govuk-body-s">Total not eligible for funding<br>0</span>
+</header>
+
+<span class="govuk-label--s govuk-visually-hidden">Payment details</span>
+
+<table class="govuk-table table-responsive-max-width">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header govuk-body-s">Payment type</th>
+      <th scope="col" class="govuk-table__header govuk-body-s">Participants</th>
+      <th scope="col" class="govuk-table__header govuk-body-s govuk-!-text-align-right">Payment per participant</th>
+      <th scope="col" class="govuk-table__header govuk-body-s govuk-!-text-align-right">Total</th>
+    </tr>
+  </thead>
+
+  <tbody class="govuk-table__body">
+    <tr class="gov-table__row">
+      <td scope="row" class="govuk-table__cell govuk-body-s"><strong>Output payment</strong></td>
+      <td scope="row" class="govuk-table__cell govuk-body-s">0</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s govuk-!-text-align-right">£607.50</td>
+      <td scope="row" class="govuk-table__cell govuk-body-s govuk-!-text-align-right">£0.00</td>
+    </tr>
+
+
+      <tr class="gov-table__row">
+        <td scope="row" class="govuk-table__cell govuk-body-s"><strong>Targeted delivery funding</strong></td>
+        <td scope="row" class="govuk-table__cell govuk-body-s">0</td>
+        <td scope="row" class="govuk-table__cell govuk-body-s govuk-!-text-align-right">£100.00</td>
+        <td scope="row" class="govuk-table__cell govuk-body-s govuk-!-text-align-right">£0.00</td>
+      </tr>
+
+
+    
+  </tbody>
+</table>
+
+<div class="govuk-table__row govuk-!-padding-bottom-1">
+  <div class="govuk-label--s govuk-table__header--numeric">
+    Course total
+    <br>
+    £707.50
+  </div>
+</div>
+</section>
+
+
+
+
+        <br>
+    </div>
+  </div>
+</div>
+
+<div class="govuk-grid-column-full">
+<br>
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">Contract Information</span>
+  </summary>
+  <div class="govuk-details__text">
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header">
+            Course Identifier
+          </th>
+          <th class="govuk-table__header govuk-table__cell--numeric">
+            Recruitment target
+          </th>
+          <th class="govuk-table__header govuk-table__cell--numeric">
+            Payment amount per participant
+          </th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">npq-early-headship-coaching-offer</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">1068</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£168.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">npq-early-years-leadership</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">1007</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£107.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">npq-executive-leadership</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">1005</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£105.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">npq-headship</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">1004</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£104.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">npq-leading-behaviour-culture</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">1001</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£101.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">npq-leading-literacy</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">1006</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£106.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">npq-leading-teaching</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">1000</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£100.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">npq-leading-teaching-development</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">1002</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£102.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">npq-senior-leadership</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">1003</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£103.00</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</details>
+</div>
+
+</div>
+
+
+  </main>
+</div>
+{% endblock %}
